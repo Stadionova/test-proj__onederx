@@ -17,7 +17,18 @@ class App extends React.Component {
       <div className='containerApp'>
         <div className='container-grid'>
           <div class="containerApp__account">
-            <div className="chart-1">onederx</div>
+            <div className='header'>
+              <div className="chart-1">
+                <div className='chart-1__logo'>
+                  <span>onederx</span>
+                </div>
+                <div className='API'>
+                  <div className='API__buttons'><span>Trade</span></div>
+                  <div className='API__buttons'><span>Documentation</span></div>
+                  <div className='API__buttons'><span>API</span></div>
+                </div>
+              </div>
+            </div>
             <div className="chart-2"></div>
           </div>
         </div>
