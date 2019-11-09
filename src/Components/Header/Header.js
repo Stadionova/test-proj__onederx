@@ -1,5 +1,7 @@
 import React from 'react';
 import './Header.css';
+import Login from "../Login/Login";
+import API from "../API/API";
 
 const Header = () => {
 
@@ -9,11 +11,7 @@ const Header = () => {
         <div className='chart-1__logo'>
           <span>onederx</span>
         </div>
-        <div className='API'>
-          <div className='API__buttons'><span>Trade</span></div>
-          <div className='API__buttons'><span>Documentation</span></div>
-          <div className='API__buttons'><span>API</span></div>
-        </div>
+        <API />
         <div className='balance'>
           <div className=''><span>Balance 60,000 BTC</span></div>
           <div className='deposit'>
@@ -34,10 +32,7 @@ const Header = () => {
         </div>
         <div className='mail'>
           <div className='mail-email'><span>thebesttrader@mail.com</span></div>
-          <div className='mail__buttons'>
-            <button>Settings</button>
-            <button>Log out</button>
-          </div>
+          <Login />
         </div>
       </div>
     </div>

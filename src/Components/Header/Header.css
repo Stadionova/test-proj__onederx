@@ -22,16 +22,6 @@
   font-family: Fontspring-DEMO-publicasans-regular;
 }
 
-.API {
-  width: 200px;
-  margin: 0 auto;
-  justify-content: space-between;
-  display: flex;
-  left: 200px;
-  color: rgb(224, 223, 221);
-  font-family: Fontspring-DEMO-publicasans-regular;
-}
-
 .balance {
   width: 200px;
   color: rgb(224, 223, 221);
@@ -62,11 +52,4 @@
 
 .mail-email {
   font-family: Fontspring-DEMO-publicasans-light;
-}
-
-.mail__buttons button {
-  border: none;
-  background-color: rgb(0, 0, 0);
-  color: rgb(224, 223, 221);
-  font-family: Fontspring-DEMO-publicasans-regular;
 }

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Fontspring-DEMO-publicasans-regular';
+  src: url("../../fonts/Fontspring-DEMO-publicasans-regular.otf");
+}
+
+.mail__buttons button {
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: rgb(224, 223, 221);
+  font-family: Fontspring-DEMO-publicasans-regular;
+}
