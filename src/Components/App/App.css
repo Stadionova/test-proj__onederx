@@ -26,3 +26,63 @@ body {
   grid-row: 2 / 18;
 }
 
+.account-settings {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.user-blocks {
+  display: flex;
+  margin-top: 20px;
+}
+
+h3 {
+  color: rgb(224, 223, 221);
+  margin: 0;
+}
+
+.user-info-change {
+  display: flex;
+  color: rgb(224, 223, 221);
+}
+
+.grey {
+  color: rgb(106, 110, 110);
+}
+
+.white {
+  color: rgb(218, 217, 214);
+}
+
+.user-info-country .white span:nth-child(2) {
+  color: rgb(106, 110, 110);
+}
+
+button {
+  border: none;
+  background-color: rgb(23, 25, 26);
+  color: rgb(32, 104, 255);
+  font-family: Fontspring-DEMO-publicasans-regular;
+}
+
+.value {
+  display: flex;
+}
+
+.value input {
+  background-color: rgb(23, 25, 26);
+  color: white;
+  border: none;
+  width: 70px;
+}
+
+.user-info {
+  margin-right: 100px;
+}
+
+.user-info-name {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
