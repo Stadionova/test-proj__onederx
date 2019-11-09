@@ -8,11 +8,11 @@
 .header {
   margin: 0 auto;
   position: relative;
+  grid-column: 1 / 5;
+  grid-row: 1;
 }
 
 .chart-1 {
-  grid-column: 1 / 5;
-  grid-row: 1;
   display: flex;
 }
 
@@ -40,9 +40,18 @@
 }
 
 .PnL {
-  width: 150px;
+  width: 200px;
   color: rgb(224, 223, 221);
   font-family: Fontspring-DEMO-publicasans-light;
+}
+
+.PnL img {
+  width: 80px;
+  height: 15px;
+}
+
+.PnL span:nth-child(2) {
+  color: green;
 }
 
 .mail {

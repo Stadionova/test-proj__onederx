@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.css';
 import Login from "../Login/Login";
 import API from "../API/API";
+import chart from "./chart.jpg";
 
 const Header = () => {
 
@@ -26,7 +27,7 @@ const Header = () => {
         <div className='PnL'>
           <div className=''><span>Unrealised PnL</span></div>
           <div className=''>
-            <img src=''></img>
+            <img src={chart} />
             <span>567.54 BTC</span>
           </div>
         </div>
