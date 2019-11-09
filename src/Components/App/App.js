@@ -12,7 +12,7 @@ class App extends React.Component {
             <Header />
             <div className="chart-2">
               <div className='account-settings'>
-                <div><h3>Account settings</h3></div>
+                <div className='title'><h3>Account settings</h3></div>
                 <div className='user-blocks'>
                   <div className='user-info'>
                     <div className="user-info-change">
@@ -35,6 +35,16 @@ class App extends React.Component {
                       <div className='value'>
                         <div><input value="*********"></input></div>
                         <div><button>Change</button></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='security'>
+                    <div><h3>Security</h3></div>
+                    <div>
+                      <div className='grey'><span>Two-Factor Authentication</span></div>
+                      <div className='security-buttons'>
+                        <div><span>Disabled</span></div>
+                        <div><button>Enable</button></div>
                       </div>
                     </div>
                   </div>

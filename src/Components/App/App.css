@@ -29,7 +29,11 @@ body {
 .account-settings {
   width: 800px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+
+.title {
+  font-size: 20pt;
 }
 
 .user-blocks {
@@ -72,7 +76,7 @@ button {
 
 .value input {
   background-color: rgb(23, 25, 26);
-  color: white;
+  color: rgb(218, 217, 214);
   border: none;
   width: 70px;
 }
@@ -86,3 +90,14 @@ button {
   margin-bottom: 10px;
 }
 
+.security {
+  margin-left: 100px;
+}
+
+.security-buttons {
+  display: flex;
+}
+
+.security-buttons {
+  color: rgb(218, 217, 214);
+}
