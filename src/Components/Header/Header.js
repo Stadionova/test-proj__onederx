@@ -16,7 +16,7 @@ const Header = () => {
         </div>
         <div className='balance'>
           <div className=''><span>Balance 60,000 BTC</span></div>
-          <div>
+          <div className='deposit'>
             <div className=''><span>Deposit</span></div>
             <div className=''><span>Withdraw</span></div>
           </div>
@@ -33,7 +33,7 @@ const Header = () => {
           </div>
         </div>
         <div className='mail'>
-          <div className=''><span>thebesttrader@mail.com</span></div>
+          <div className='mail-email'><span>thebesttrader@mail.com</span></div>
           <div className='mail__buttons'>
             <button>Settings</button>
             <button>Log out</button>
