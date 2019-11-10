@@ -17,6 +17,8 @@
   position: relative;
   grid-column: 1 / 5;
   grid-row: 1;
+  width: 1050px;
+  margin: 0 auto;
 }
 
 .chart-1 {
@@ -32,6 +34,6 @@
 
 .chart-1__logo span {
   color: rgb(32, 104, 255);
-  font-size: 25pt;
+  font-size: 22pt;
   font-family: Fontspring-DEMO-publicasans-regular;
 }

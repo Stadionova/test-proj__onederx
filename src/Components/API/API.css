@@ -9,6 +9,8 @@
   font-size: 8pt;
   display: flex;
   font-weight: bold;
+  position: relative;
+  height: 30px;
 }
 
 .first {
