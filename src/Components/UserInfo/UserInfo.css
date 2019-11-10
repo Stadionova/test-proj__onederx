@@ -22,6 +22,10 @@
   width: 60px;
 }
 
+.white input:nth-child(2) {
+  color: rgb(106, 110, 110);
+}
+
 .white input:active {
   background-color: rgb(23, 25, 26);
   outline: none;

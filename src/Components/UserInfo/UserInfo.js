@@ -1,7 +1,11 @@
 import React from 'react';
 import './UserInfo.css';
 
-const UserInfo = () => {
+const UserInfo = (props) => {
+
+  function createNewTask(e) {
+    e.currentTarget.value = '';
+  }
 
   return (
     <div className='user-info'>
@@ -11,11 +15,11 @@ const UserInfo = () => {
       </div>
       <div className='user-info-name'>
         <div className='grey'><span>Name</span></div>
-        <div className='white'><input value='Alex Salio'></input></div>
+        <div className='white'><input value={props.name} onClick={createNewTask}></input></div>
       </div>
       <div className='user-info-country'>
         <div className='grey'><span>Country of Residence</span></div>
-        <div className='white'><input value='Ukraine'></input><span>UA</span></div>
+        <div className='white'><input value={props.country}></input><input value={props.countryCode}></input></div>
       </div>
     </div>
   )
