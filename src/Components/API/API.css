@@ -4,11 +4,12 @@
 }
 
 .API {
-  width: 200px;
-  margin: 0 auto;
-  justify-content: space-between;
-  display: flex;
-  left: 200px;
+  width: 150px;
   color: rgb(224, 223, 221);
   font-family: Fontspring-DEMO-publicasans-regular;
+  font-size: 8pt;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
 }

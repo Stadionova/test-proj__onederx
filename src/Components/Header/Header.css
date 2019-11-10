@@ -6,7 +6,6 @@
 }
 
 .header {
-  margin: 0 auto;
   position: relative;
   grid-column: 1 / 5;
   grid-row: 1;
@@ -14,6 +13,9 @@
 
 .chart-1 {
   display: flex;
+  width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .chart-1__logo span {
