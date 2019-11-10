@@ -9,7 +9,7 @@ const Security = () => {
       <div>
         <div className='grey'><span>Two-Factor Authentication</span></div>
         <div className='security-buttons'>
-          <div><span>Disabled</span></div>
+          <div><input value='Disabled'></input></div>
           <div><button>Enable</button></div>
         </div>
       </div>

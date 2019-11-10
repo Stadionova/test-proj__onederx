@@ -12,7 +12,7 @@
 .account-settings {
   width: 710px;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 20px;
   color: rgb(255, 255, 255);
 }
 
@@ -25,6 +25,8 @@
 .user-blocks {
   display: flex;
   margin-top: 20px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 h3 {

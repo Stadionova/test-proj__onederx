@@ -8,6 +8,23 @@
   color: rgb(224, 223, 221);
 }
 
+.user-info-name {
+  margin-top: 15px;
+}
+
+.white input {
+  background-color: rgb(23, 25, 26);
+  border: none;
+  color: rgb(218, 217, 214);
+  outline: none;
+  width: 50px;
+}
+
+.white input:active {
+  background-color: rgb(23, 25, 26);
+  outline: none;
+}
+
 .grey {
   color: rgb(106, 110, 110);
 }
@@ -17,7 +34,7 @@
   margin-bottom: 30px;
 }
 
-.user-info-country .white span:nth-child(2) {
+.user-info-country .white span {
   color: rgb(106, 110, 110);
 }
 
@@ -26,4 +43,5 @@ button {
   background-color: rgb(23, 25, 26);
   color: rgb(32, 104, 255);
   font-family: Fontspring-DEMO-publicasans-regular;
+  font-size: 7pt;
 }
