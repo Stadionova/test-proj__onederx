@@ -22,3 +22,7 @@
   font-size: 8pt;
   font-weight: bold;
 }
+
+.balance-btc span {
+  color: rgb(241, 241, 241);
+}

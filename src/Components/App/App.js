@@ -10,7 +10,7 @@ class App extends React.Component {
       <div className='containerApp'>
         <div className='container-grid'>
           <div class="containerApp__account">
-            <div className='header'><Header /></div>
+            <div className='header-block'><Header /></div>
             <Main />
           </div>
         </div>

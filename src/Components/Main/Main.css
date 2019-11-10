@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Fontspring-DEMO-aktifoa-bold';
+  src: url("../../fonts/Fontspring-DEMO-aktifoa-bold.otf");
+}
+
 .chart-2 {
   background-color: rgb(23, 25, 26);
   grid-column: 1 / 19;
@@ -5,15 +10,16 @@
 }
 
 .account-settings {
-  grid-column: 6 / 12;
-  grid-row: 2 / 19;
-  width: 780px;
+  width: 710px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 15px;
+  color: rgb(255, 255, 255);
 }
 
 .title {
   font-size: 20pt;
+  font-family: Fontspring-DEMO-aktifoa-bold;
+  color: rgb(255,255,255);
 }
 
 .user-blocks {

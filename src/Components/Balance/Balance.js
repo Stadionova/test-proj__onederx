@@ -5,7 +5,7 @@ const Balance = () => {
 
   return (
     <div className='balance'>
-      <div className=''><span>Balance 60,000 BTC</span></div>
+      <div className='balance-btc'><span>Balance 60,000 BTC</span></div>
       <div className='deposit'>
         <div className=''><span>Deposit</span></div>
         <div className=''><span>Withdraw</span></div>
