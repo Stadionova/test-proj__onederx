@@ -1,0 +1,14 @@
+.PnL {
+  width: 200px;
+  color: rgb(224, 223, 221);
+  font-family: Fontspring-DEMO-publicasans-light;
+}
+
+.PnL img {
+  width: 80px;
+  height: 15px;
+}
+
+.PnL span:nth-child(2) {
+  color: green;
+}

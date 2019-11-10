@@ -9,9 +9,3 @@
   grid-template-rows: repeat(17, 36.7px);
   background-color: rgb(0, 0, 0);
 }
-
-.chart-2 {
-  background-color: rgb(23, 25, 26);
-  grid-column: 1 / 5;
-  grid-row: 2 / 18;
-}

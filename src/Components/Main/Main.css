@@ -1,3 +1,9 @@
+.chart-2 {
+  background-color: rgb(23, 25, 26);
+  grid-column: 1 / 5;
+  grid-row: 2 / 18;
+}
+
 .account-settings {
   width: 800px;
   margin: 0 auto;

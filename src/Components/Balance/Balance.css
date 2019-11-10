@@ -1,0 +1,10 @@
+.balance {
+  width: 200px;
+  color: rgb(224, 223, 221);
+  font-family: Fontspring-DEMO-publicasans-light;
+}
+
+.deposit {
+  display: flex;
+  font-family: Fontspring-DEMO-publicasans-regular;
+}
