@@ -1,6 +1,8 @@
 @font-face {
   font-family: 'Fontspring-DEMO-aktifoa-bold';
   src: url("../../fonts/Fontspring-DEMO-aktifoa-bold.otf");
+  font-family: 'Fontspring-DEMO-ncttorin-bold';
+  src: url("../../fonts/Fontspring-DEMO-ncttorin-bold.otf");
 }
 
 .user-info-change {
@@ -50,3 +52,7 @@ button {
   font-family: Fontspring-DEMO-publicasans-regular;
   font-size: 8pt;
 }
+
+/* h3 {
+  font-family: Fontspring-DEMO-ncttorin-bold;
+} */
