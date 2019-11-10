@@ -5,6 +5,13 @@
   src: url("../../fonts/Fontspring-DEMO-publicasans-regular.otf");
 }
 
+.balance-block {
+  width: 400px;
+  justify-content: space-between;
+  margin: 0 auto;
+  display: flex;
+}
+
 .header {
   position: relative;
   grid-column: 1 / 5;

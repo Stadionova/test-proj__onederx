@@ -1,15 +1,16 @@
 @font-face {
-  font-family: 'Fontspring-DEMO-publicasans-regular';
-  src: url("../../fonts/Fontspring-DEMO-publicasans-regular.otf");
+  font-family: 'ofont.ru_Formular';
+  src: url("../../fonts/ofont.ru_Formular.ttf");
 }
 
 .API {
   width: 150px;
   color: rgb(224, 223, 221);
-  font-family: Fontspring-DEMO-publicasans-regular;
+  font-family: 'ofont.ru_Formular';
   font-size: 8pt;
   position: relative;
   display: flex;
   justify-content: space-between;
   margin-right: 20px;
+  font-weight: bold;
 }

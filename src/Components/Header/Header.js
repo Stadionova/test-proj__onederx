@@ -13,9 +13,11 @@ const Header = () => {
       <div className="chart-1">
         <div className='chart-1__logo'><span>onederx</span></div>
         <API />
-        <Balance />
-        <Margin />
-        <PnL />
+        <div className='balance-block'>
+          <Balance />
+          <Margin />
+          <PnL />
+        </div>
         <Login />
       </div>
     </div>

@@ -6,8 +6,8 @@ const PnL = () => {
 
   return (
     <div className='PnL'>
-      <div className=''><span>Unrealised PnL</span></div>
-      <div className=''>
+      <div><span>Unrealised PnL</span></div>
+      <div>
         <img src={chart} />
         <span>567.54 BTC</span>
       </div>

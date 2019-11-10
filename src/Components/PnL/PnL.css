@@ -1,8 +1,17 @@
+@font-face {
+  font-family: 'ofont.ru_Formular';
+  src: url("../../fonts/ofont.ru_Formular.ttf");
+}
+
 .PnL {
   width: 150px;
   color: rgb(224, 223, 221);
-  font-family: Fontspring-DEMO-publicasans-light;
+  font-family: 'ofont.ru_Formular';
   font-size: 8pt;
+}
+
+.PnL span:nth-child(1) {
+  margin-bottom: 1px;
 }
 
 .PnL img {

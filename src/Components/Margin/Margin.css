@@ -1,6 +1,15 @@
+@font-face {
+  font-family: 'ofont.ru_Formular';
+  src: url("../../fonts/ofont.ru_Formular.ttf");
+}
+
 .margin {
   width: 100px;
   color: rgb(224, 223, 221);
-  font-family: Fontspring-DEMO-publicasans-light;
+  font-family: 'ofont.ru_Formular';
   font-size: 8pt;
+}
+
+.margin span:nth-child(1) {
+  margin-bottom: 1px;
 }
