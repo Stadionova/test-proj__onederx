@@ -36,4 +36,7 @@
 
 .mail__buttons button:nth-child(1) {
   color: rgb(32, 104, 255);
+  text-decoration: underline;
 }
+
+
