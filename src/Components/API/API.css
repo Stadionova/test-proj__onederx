@@ -4,13 +4,23 @@
 }
 
 .API {
-  width: 150px;
   color: rgb(224, 223, 221);
   font-family: 'ofont.ru_Formular';
   font-size: 8pt;
-  position: relative;
   display: flex;
-  justify-content: space-between;
-  margin-right: 20px;
   font-weight: bold;
 }
+
+.first {
+  margin-right: 50px;
+}
+
+.Documentation {
+  margin-right: 100px;
+}
+
+.API__buttons span {
+  position: absolute;
+  bottom: 0;
+}
+

@@ -10,6 +10,7 @@
   justify-content: space-between;
   margin: 0 auto;
   display: flex;
+  margin-top: 5px;
 }
 
 .header {
@@ -20,9 +21,13 @@
 
 .chart-1 {
   display: flex;
-  width: 1000px;
+  width: 1050px;
   margin: 0 auto;
   justify-content: space-between;
+}
+
+.chart-1__logo {
+  margin-right: 50px;
 }
 
 .chart-1__logo span {

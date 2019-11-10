@@ -6,6 +6,6 @@
 .containerApp__account {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(17, 36.7px);
+  grid-template-rows: repeat(17, 33px);
   background-color: rgb(0, 0, 0);
 }
