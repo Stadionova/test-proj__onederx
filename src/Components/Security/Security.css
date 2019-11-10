@@ -14,17 +14,18 @@ button {
   font-family: Fontspring-DEMO-publicasans-regular;
 }
 
-.value {
+.security {
+  margin-left: 100px;
+}
+
+.security-buttons {
   display: flex;
 }
 
-.value input {
-  background-color: rgb(23, 25, 26);
+.security-buttons {
   color: rgb(218, 217, 214);
-  border: none;
-  width: 70px;
 }
 
-.log-in div {
+.security div {
   margin-bottom: 15px;
 }

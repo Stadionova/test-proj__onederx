@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Fontspring-DEMO-publicasans-regular';
+  src: url("../../fonts/Fontspring-DEMO-publicasans-regular.otf");
+  font-family: 'ofont.ru_Formular';
+  src: url("../../fonts/ofont.ru_Formular.ttf");
+}
+
+.mail {
+  color: rgb(224, 223, 221);
+  font-size: 8pt;
+  font-family: 'ofont.ru_Formular';
+  margin-top: 5px;
+}
+
+.mail span:nth-child(1) {
+  margin-bottom: 1px;
+}
+
+.mail__buttons {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mail__buttons button {
+  color: rgb(224, 223, 221);
+  font-weight: bold;
+  font-size: 8pt;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+.mail__buttons button:active {
+  border: none;
+}
+
+.mail__buttons button:nth-child(1) {
+  color: rgb(32, 104, 255);
+}

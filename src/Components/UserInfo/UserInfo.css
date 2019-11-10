@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Fontspring-DEMO-aktifoa-bold';
+  src: url("../../fonts/Fontspring-DEMO-aktifoa-bold.otf");
+}
+
+.user-info-change {
+  display: flex;
+  color: rgb(224, 223, 221);
+}
+
+.grey {
+  color: rgb(106, 110, 110);
+}
+
+.white {
+  color: rgb(218, 217, 214);
+  margin-bottom: 30px;
+}
+
+.user-info-country .white span:nth-child(2) {
+  color: rgb(106, 110, 110);
+}
+
+button {
+  border: none;
+  background-color: rgb(23, 25, 26);
+  color: rgb(32, 104, 255);
+  font-family: Fontspring-DEMO-publicasans-regular;
+}

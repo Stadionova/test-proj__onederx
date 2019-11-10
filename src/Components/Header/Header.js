@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import Login from "../Login/Login";
+import Mail from "../Mail/Mail";
 import API from "../API/API";
 import Balance from "../Balance/Balance";
 import Margin from "../Margin/Margin";
@@ -18,7 +18,7 @@ const Header = () => {
           <Margin />
           <PnL />
         </div>
-        <Login />
+        <Mail />
       </div>
     </div>
   )

@@ -1,17 +1,20 @@
 import React from 'react';
-import './Login.css';
+import './LogIn.css';
 
-const Login = () => {
+const LogIn = () => {
 
   return (
-    <div className='mail'>
-      <div><span>thebesttrader@mail.com</span></div>
-      <div className='mail__buttons'>
-        <button>Settings</button>
-        <button>Log out</button>
+    <div className='log-in'>
+      <div><h3>Log in</h3></div>
+      <div>
+        <div className='grey'><span>Password</span></div>
+        <div className='value'>
+          <div><input value="*********"></input></div>
+          <div><button>Change</button></div>
+        </div>
       </div>
     </div>
   )
 }
 
-export default Login;
+export default LogIn;
