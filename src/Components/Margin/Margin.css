@@ -13,3 +13,7 @@
 .margin span:nth-child(1) {
   margin-bottom: 1px;
 }
+
+.btc {
+  color: rgb(106, 110, 110);
+}

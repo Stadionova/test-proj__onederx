@@ -19,7 +19,7 @@ const Main = () => {
             </div>
             <div className='user-info-country'>
               <div className='grey'><span>Country of Residence</span></div>
-              <div className='white'><span>Ukraine</span><span>UA</span></div>
+              <div className='white'><span>Ukraine</span><span> UA</span></div>
             </div>
           </div>
           <div className='log-in'>
