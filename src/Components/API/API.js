@@ -5,9 +5,9 @@ const API = () => {
 
   return (
     <div className='API'>
-      <div className='API__buttons first'><span>Trade</span></div>
-      <div className='API__buttons Documentation'><span>Documentation</span></div>
-      <div className='API__buttons'><span>API</span></div>
+      <div className='API__buttons first'><a href='#'>Trade</a></div>
+      <div className='API__buttons documentation'><a href='#'>Documentation</a></div>
+      <div className='API__buttons'><a href='#'>API</a></div>
     </div>
   )
 }

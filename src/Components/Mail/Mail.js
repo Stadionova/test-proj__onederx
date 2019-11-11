@@ -7,8 +7,8 @@ const Mail = () => {
     <div className='mail'>
       <div><span>thebesttrader@mail.com</span></div>
       <div className='mail__buttons'>
-        <button>Settings</button>
-        <button>Log out</button>
+        <a href='#'>Settings</a>
+        <a href='#'>Log out</a>
       </div>
     </div>
   )

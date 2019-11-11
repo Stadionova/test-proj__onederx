@@ -23,6 +23,12 @@
   font-weight: bold;
 }
 
-.balance-btc span {
+.deposit a {
   color: rgb(241, 241, 241);
+  text-decoration: none;
+}
+
+.deposit a:hover {
+  color: rgb(32, 104, 255);
+  transition: 1s;
 }

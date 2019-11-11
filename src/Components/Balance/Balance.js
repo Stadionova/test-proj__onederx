@@ -7,8 +7,8 @@ const Balance = () => {
     <div className='balance'>
       <div className='balance-btc'><span>Balance 60,000 BTC</span></div>
       <div className='deposit'>
-        <div className=''><span>Deposit</span></div>
-        <div className=''><span>Withdraw</span></div>
+        <div><a href="#">Deposit</a></div>
+        <div><a href="#">Withdraw</a></div>
       </div>
     </div>
   )

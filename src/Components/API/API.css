@@ -18,12 +18,21 @@
   margin-right: 50px;
 }
 
-.Documentation {
+.documentation {
   margin-right: 100px;
 }
 
-.API__buttons span {
+.API__buttons a {
   position: absolute;
   bottom: 0;
 }
 
+.API a {
+  color: rgb(224, 223, 221);
+  text-decoration: none;
+}
+
+.API a:hover {
+  color: rgb(32, 104, 255);
+  transition: 1s;
+}
