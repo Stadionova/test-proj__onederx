@@ -12,7 +12,6 @@ const Main = (props) => {
         <div className='title'><h3>Account settings</h3></div>
         <div className='user-blocks'>
           <UserInfo />
-          {/* <LogIn password={this.props.password} /> */}
           <LogIn />
           {/* <Security able={this.props.able} /> */}
           <Security />

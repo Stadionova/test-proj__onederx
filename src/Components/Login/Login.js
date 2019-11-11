@@ -1,7 +1,12 @@
 import React from 'react';
 import './LogIn.css';
+import { connect } from 'react-redux';
 
-const LogIn = () => {
+const LogIn = (props) => {
+
+  function createNewTask(e) {
+    e.currentTarget.value = '';
+  }
 
   return (
     <div className='log-in'>
@@ -9,7 +14,7 @@ const LogIn = () => {
       <div>
         <div className='grey'><span>Password</span></div>
         <div className='value'>
-          <div><input value="*********" type="password"></input></div>
+          <div><input value={props.password} type="password" onClick={createNewTask}></input></div>
           <div><button>Change</button></div>
         </div>
       </div>
@@ -17,4 +22,12 @@ const LogIn = () => {
   )
 }
 
-export default LogIn;
+export default connect(
+  state => ({
+    name: state.name,
+    password: state.password,
+    country: state.country,
+    countryCode: state.countryCode,
+    able: state.able
+  })
+)(LogIn);

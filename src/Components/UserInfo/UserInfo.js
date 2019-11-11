@@ -20,13 +20,11 @@ const UserInfo = (props) => {
       </div>
       <div className='user-info-country'>
         <div className='grey'><span>Country of Residence</span></div>
-        <div className='white'><input value={props.country}></input><input value={props.countryCode}></input></div>
+        <div className='white'><input value={props.country} onClick={createNewTask}></input><input value={props.countryCode} onClick={createNewTask}></input></div>
       </div>
     </div>
   )
 }
-
-// export default UserInfo;
 
 export default connect(
   state => ({
