@@ -57,6 +57,10 @@ button {
   font-size: 8pt;
 }
 
-/* h3 {
-  font-family: Fontspring-DEMO-ncttorin-bold;
-} */
+.user-info-name .white {
+  color: rgb(218, 217, 214);
+}
+
+::-webkit-input-placeholder {
+  color: rgb(218, 217, 214);
+}

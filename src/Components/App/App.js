@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 class App extends React.Component {
 
   state = {
-    name: 'name',
+    name: '',
     password: 'password',
     country: 'country',
     countryCode: 'UA',

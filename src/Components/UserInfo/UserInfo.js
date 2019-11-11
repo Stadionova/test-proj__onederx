@@ -5,7 +5,10 @@ import { connect } from 'react-redux';
 const UserInfo = (props) => {
 
   function createNewTask(e) {
-    e.currentTarget.value = '';
+    if (e.key === 'Enter') {
+      const name = e.currentTarget.value;
+      props.showComeData(name);
+    }
   }
 
   return (
@@ -16,7 +19,7 @@ const UserInfo = (props) => {
       </div>
       <div className='user-info-name'>
         <div className='grey'><span>Name</span></div>
-        <div className='white'><input value={props.name} onClick={createNewTask}></input></div>
+        <div className='white'><input type='search' placeholder='name' onKeyPress={createNewTask}></input></div>
       </div>
       <div className='user-info-country'>
         <div className='grey'><span>Country of Residence</span></div>
@@ -33,5 +36,8 @@ export default connect(
     country: state.country,
     countryCode: state.countryCode,
     able: state.able
+  }),
+  dispatch => ({
+    showComeData: (name) => dispatch({ type: "dataCome", payload: name })
   })
 )(UserInfo);

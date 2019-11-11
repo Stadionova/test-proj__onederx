@@ -14,10 +14,20 @@ const initialState = {
 }
 
 function changeChartByPeriod(state = initialState, action) {
+    if (action.type === 'dataCome') {
+        return { // здесь возвращается новый массив
+            ...state, // возвращаю массив
+            name: action.payload // добавляю экшен
+        };
+    }
     return state;
 }
 
 const store = createStore(changeChartByPeriod);
+
+store.subscribe(() => {
+    console.log(store.getState());
+})
 
 ReactDOM.render(
     <Provider store={store}>
