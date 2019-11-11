@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from "../Header/Header";
 import Main from "../Main/Main";
+import { connect } from 'react-redux';
 
 class App extends React.Component {
 
@@ -21,8 +22,7 @@ class App extends React.Component {
             <div className='header-block'>
               <Header />
             </div>
-            <Main name={this.state.name} password={this.state.password} 
-            country={this.state.country} countryCode={this.state.countryCode} able={this.state.able} />
+            <Main />
           </div>
         </div>
       </div>
@@ -30,4 +30,12 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default connect(
+  state => ({
+    name: state.name,
+    password: state.password,
+    country: state.country,
+    countryCode: state.countryCode,
+    able: state.able
+  })
+)(App);

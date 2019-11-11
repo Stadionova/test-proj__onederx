@@ -11,9 +11,11 @@ const Main = (props) => {
       <div className='account-settings'>
         <div className='title'><h3>Account settings</h3></div>
         <div className='user-blocks'>
-          <UserInfo name={props.name} country={props.country} countryCode={props.countryCode}/>
-          <LogIn password={props.password} />
-          <Security able={props.able} />
+          <UserInfo />
+          {/* <LogIn password={this.props.password} /> */}
+          <LogIn />
+          {/* <Security able={this.props.able} /> */}
+          <Security />
         </div>
       </div>
     </div>

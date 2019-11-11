@@ -1,5 +1,6 @@
 import React from 'react';
 import './UserInfo.css';
+import { connect } from 'react-redux';
 
 const UserInfo = (props) => {
 
@@ -25,4 +26,14 @@ const UserInfo = (props) => {
   )
 }
 
-export default UserInfo;
+// export default UserInfo;
+
+export default connect(
+  state => ({
+    name: state.name,
+    password: state.password,
+    country: state.country,
+    countryCode: state.countryCode,
+    able: state.able
+  })
+)(UserInfo);
