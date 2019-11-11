@@ -9,7 +9,7 @@ class App extends React.Component {
   state = {
     name: '',
     password: 'password',
-    country: 'country',
+    country: '',
     countryCode: 'UA',
     able: ['able', 'disabled']
   }
