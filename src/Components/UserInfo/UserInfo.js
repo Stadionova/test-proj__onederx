@@ -38,7 +38,7 @@ const UserInfo = (props) => {
       <div className='user-info-country'>
         <div className='grey'><span>Country of Residence</span></div>
         <div className='white'>
-          <input type='search' placeholder='country' onClickonKeyPress={typeCountry}></input>
+          <input type='search' placeholder='country' onKeyPress={typeCountry}></input>
           <input type='search' placeholder='code' onKeyPress={typeCountryCode}></input>
         </div>
       </div>

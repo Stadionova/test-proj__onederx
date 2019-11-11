@@ -10,7 +10,7 @@ const initialState = {
     password: '',
     country: '',
     countryCode: '',
-    able: ['able', 'disabled']
+    able: true
 }
 
 function changeChartByPeriod(state = initialState, action) {
@@ -39,6 +39,13 @@ function changeChartByPeriod(state = initialState, action) {
         return {
             ...state,
             password: action.payload
+        };
+    }
+
+    if (action.type === 'TOGGLE_TWO_FACTOR') {
+        return {
+            ...state,
+            able: !state.able
         };
     }
 

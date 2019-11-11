@@ -1,7 +1,13 @@
 import React from 'react';
 import './Security.css';
+import { connect } from 'react-redux';
 
-const Security = () => {
+const Security = (props) => {
+
+  function changeAble(event) {
+    const able = event.currentTarget.value;
+    props.showAble(able);
+  }
 
   return (
     <div className='security'>
@@ -9,12 +15,19 @@ const Security = () => {
       <div>
         <div className='grey'><span>Two-Factor Authentication</span></div>
         <div className='security-buttons'>
-          <div><input value='Disabled'></input></div>
-          <div><button>Enable</button></div>
+          <div><span>{props.able ? 'Enabled' : 'Disabled'}</span></div>
+          <div><button onClick={changeAble}>{props.able ? 'Disabled' : 'Enabled'}</button></div>
         </div>
       </div>
     </div>
   )
 }
 
-export default Security;
+export default connect(
+  state => ({
+    able: state.able
+  }),
+  dispatch => ({
+    showAble: (able) => dispatch({ type: "TOGGLE_TWO_FACTOR", payload: able })
+  })
+)(Security);
