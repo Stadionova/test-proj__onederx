@@ -8,10 +8,13 @@
 }
 
 .balance {
-  color: rgb(224, 223, 221);
   font-family: 'ofont.ru_Formular';
   font-size: 8pt;
   margin-bottom: 1px;
+}
+
+.balance-btc {
+  color: rgb(231, 230, 227);
 }
 
 .deposit {

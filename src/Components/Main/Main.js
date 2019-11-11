@@ -13,7 +13,6 @@ const Main = (props) => {
         <div className='user-blocks'>
           <UserInfo />
           <LogIn />
-          {/* <Security able={this.props.able} /> */}
           <Security />
         </div>
       </div>

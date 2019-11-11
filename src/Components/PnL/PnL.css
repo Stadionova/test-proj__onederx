@@ -5,9 +5,12 @@
 
 .PnL {
   width: 150px;
-  color: rgb(224, 223, 221);
   font-family: 'ofont.ru_Formular';
   font-size: 8pt;
+}
+
+.unrealised {
+  color: rgb(231, 230, 227);
 }
 
 .PnL span:nth-child(1) {

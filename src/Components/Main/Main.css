@@ -1,6 +1,10 @@
 @font-face {
   font-family: 'Fontspring-DEMO-aktifoa-bold';
   src: url("../../fonts/Fontspring-DEMO-aktifoa-bold.otf");
+  font-family: 'RBCGrotesk-Regular';
+  src: url("../../fonts/RBCGrotesk-Regular.otf");
+  font-family: 'HarmoniaSansProCyr-Bold';
+  src: url("../../fonts/HarmoniaSansProCyr-Bold.otf");
 }
 
 .chart-2 {
@@ -18,8 +22,7 @@
 
 .title {
   font-size: 20pt;
-  font-family: Fontspring-DEMO-aktifoa-bold;
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
 }
 
 .user-blocks {
@@ -30,6 +33,7 @@
 }
 
 h3 {
-  color: rgb(224, 223, 221);
+  color: rgb(255, 255, 255);
   margin: 0;
+  font-family: HarmoniaSansProCyr-Bold;
 }
