@@ -30,6 +30,14 @@ const UserInfo = (props) => {
       <div className="user-info-change">
         <h3>User info</h3>
         <div><button>Change</button></div>
+
+        {/* <dialog open>
+          <p>Полинезийцы называют Млечны</p>
+          <p>
+            <button id="closeDialog">Закрыть окно</button>
+          </p>
+        </dialog> */}
+
       </div>
       <div className='user-info-name'>
         <div className='grey'><span>Name</span></div>
@@ -42,6 +50,20 @@ const UserInfo = (props) => {
           <input type='search' placeholder='code' onKeyPress={typeCountryCode}></input>
         </div>
       </div>
+
+      <div className='modalWindow-container'>
+        <div className='modalWindow'>
+          <h3>User info</h3>
+          <div><span>First name</span></div>
+          <input></input>
+          <div><span>Last name</span></div>
+          <input></input>
+          <div><span>Country of Residence</span></div>
+          <input></input>
+          <div><button id="closeDialog">Update</button></div>
+        </div>
+      </div>
+
     </div>
   )
 }
