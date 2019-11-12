@@ -64,3 +64,11 @@ button {
 ::-webkit-input-placeholder {
   color: rgb(218, 217, 214);
 }
+
+button:active,
+button:focus,
+button:hover {
+  outline: none !important;
+  color: rgb(143, 173, 238);
+  transition: 1s;
+}
