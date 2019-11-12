@@ -110,6 +110,7 @@ dialog {
   border-bottom: solid 1px rgb(106, 110, 110);
   color: rgb(218, 217, 214);
   outline: none !important;
+  margin-bottom: 15px;
 }
 
 .modalWindow input:active,
@@ -120,4 +121,14 @@ input:focus {
 
 .modalWindow span {
   color: rgb(106, 110, 110);
+  font-size: 9pt;
+}
+
+.modalWindow button {
+  width: 240px;
+  height: 50px;
+  background-color: rgb(32, 104, 255);
+  color: white;
+  margin-top: 20px;
+  font-size: 12pt;
 }
