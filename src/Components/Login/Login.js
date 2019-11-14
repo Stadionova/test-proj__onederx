@@ -28,8 +28,10 @@ class LogIn extends React.Component {
         </div>
         <div className='log-in__modalWindow-container' style={style}>
           <div className='log-in__modalWindow'>
-            <h3>Log in</h3>
-            <div><button className='log-in__button-close' onClick={this.closeModalWindowLogIn.bind(this)}>Close</button></div>
+            <div className='log-in-close'>
+              <div><h3>Log in</h3></div>
+              <div className='log-in__close'><button className='log-in__button-close' onClick={this.closeModalWindowLogIn.bind(this)}>Cancel</button></div>
+            </div>
             <div><span>password</span></div>
             <div className='log-in__button-update'><button>Update</button></div>
           </div>

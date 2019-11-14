@@ -4,35 +4,6 @@ import { connect } from 'react-redux';
 
 class UserInfo extends React.Component {
 
-  createNewTask(e) {
-    if (e.key === 'Enter') {
-      const name = e.currentTarget.value;
-      this.props.showComeData(name);
-    }
-  }
-
-  typeCountry(e) {
-    if (e.key === 'Enter') {
-      const country = e.currentTarget.value;
-      this.props.saveCountry(country);
-    }
-  }
-
-  typeCountryCode(e) {
-    if (e.key === 'Enter') {
-      const countryCode = e.currentTarget.value;
-      this.props.saveCountryCode(countryCode);
-    }
-  }
-
-  closeModalWindow() {
-    this.props.hideModal();
-  }
-
-  openModalWindow() {
-    this.props.showModal();
-  }
-
   render() {
 
     let style = {
@@ -53,19 +24,21 @@ class UserInfo extends React.Component {
         </div>
         <div className='user-info-name'>
           <div className='grey'><span>Name</span></div>
-          <div className='white'><input type='search' placeholder='name' onKeyPress={this.createNewTask.bind(this)}></input></div>
+          <div className='white'><input type='search' placeholder='name' onKeyPress={this.createNewTask}></input></div>
         </div>
         <div className='user-info-country'>
           <div className='grey'><span>Country of Residence</span></div>
           <div className='white'>
-            <input type='search' placeholder='country' onKeyPress={this.typeCountry.bind(this)}></input>
+            <input type='search' placeholder='country' onKeyPress={this.typeCountry}></input>
             <input type='search' placeholder='code' onKeyPress={this.typeCountryCode.bind(this)}></input>
           </div>
         </div>
         <div className='modalWindow-container' style={style} >
           <div className='modalWindow'>
-            <h3>User info</h3>
-            <div><button className='button-close' onClick={this.closeModalWindow.bind(this)}>Close</button></div>
+            <div className='modalWindow__title-close'>
+              <div><h3>User info</h3></div>
+              <div className='close'><button className='button-close' onClick={this.closeModalWindow.bind(this)}>Cancel</button></div>
+            </div>
             <div><span>First name</span></div>
             <input></input>
             <div><span>Last name</span></div>
@@ -78,6 +51,36 @@ class UserInfo extends React.Component {
       </div>
     );
   }
+
+  typeCountry(e) {
+    if (e.key === 'Enter') {
+      const country = e.currentTarget.value;
+      this.props.saveCountry(country);
+    }
+  }
+
+  typeCountryCode(e) {
+    if (e.key === 'Enter') {
+      const countryCode = e.currentTarget.value;
+      this.props.saveCountryCode(countryCode);
+    }
+  }
+
+  createNewTask(e) {
+    if (e.key === 'Enter') {
+      const name = e.currentTarget.value;
+      this.props.showComeData(name);
+    }
+  }
+
+  closeModalWindow() {
+    this.props.hideModal();
+  }
+
+  openModalWindow() {
+    this.props.showModal();
+  }
+
 }
 
 export default connect(

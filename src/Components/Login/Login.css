@@ -45,13 +45,13 @@ dialog {
 }
 
 .log-in__modalWindow-container {
-  margin-top: -180px;
+  margin-top: -95px;
   width: 280px;
   height: 300px;
   background-color: rgb(34, 34, 36);
   color: white;
   margin-left: -20px;
-  position: fixed;
+  position: absolute;
 }
 
 .log-in__modalWindow {
@@ -59,6 +59,7 @@ dialog {
   height: 260px;
   margin: 0 auto;
   margin-top: 20px;
+  position: relative;
 }
 
 .log-in__modalWindow input {
@@ -94,4 +95,17 @@ input:focus {
   color: white;
   margin-top: 20px;
   font-size: 12pt;
+}
+
+.log-in-close {
+  display: flex;
+}
+
+.log-in__close {
+  position: absolute;
+  right: 0;
+}
+
+.log-in__close button {
+  background-color: rgb(34, 34, 36);
 }
