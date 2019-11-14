@@ -6,7 +6,9 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 const initialState = {
-    name: '',
+    firstName: '',
+    lastName: '',
+    fullName: '',
     password: '',
     country: '',
     countryCode: '',
@@ -16,10 +18,24 @@ const initialState = {
 }
 
 function changeChartByPeriod(state = initialState, action) {
-    if (action.type === 'dataCome') {
+    if (action.type === 'dataFirstName') {
         return {
             ...state,
-            name: action.payload
+            firstName: action.payload
+        };
+    }
+
+    if (action.type === 'dataLastName') {
+        return {
+            ...state,
+            lastName: action.payload
+        };
+    }
+
+    if (action.type === 'dataFullName') {
+        return {
+            ...state,
+            fullName: action.payload
         };
     }
 
