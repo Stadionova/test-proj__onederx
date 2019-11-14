@@ -1,41 +1,22 @@
 import React from 'react';
 import './LogIn.css';
 import { connect } from 'react-redux';
+import ModalWindowLogIn from "../ModalWindowLogIn/ModalWindowLogIn";
 
 class LogIn extends React.Component {
 
   render() {
-
-    let style = {
-      visibility: ''
-    }
-
-    if (this.props.visibilityLogIn == false) {
-      style = {
-        visibility: 'hidden'
-      }
-    }
-
     return (
       <div className='log-in'>
         <div><h3>Log in</h3></div>
         <div>
           <div className='grey'><span>Password</span></div>
           <div className='value'>
-            <div><input placeholder='password' onKeyPress={this.typePassword} type="password"></input></div>
+            <div><input placeholder='password' onKeyPress={this.typePassword.bind(this)} type="password"></input></div>
             <div><button onClick={this.openModalWindowLogIn.bind(this)}>Change</button></div>
           </div>
         </div>
-        <div className='log-in__modalWindow-container' style={style}>
-          <div className='log-in__modalWindow'>
-            <div className='log-in-close'>
-              <div><h3>Log in</h3></div>
-              <div className='log-in__close'><button className='log-in__button-close' onClick={this.closeModalWindowLogIn.bind(this)}>Cancel</button></div>
-            </div>
-            <div><span>password</span></div>
-            <div className='log-in__button-update'><button>Update</button></div>
-          </div>
-        </div>
+        <ModalWindowLogIn />
       </div>
     );
   }
@@ -47,10 +28,6 @@ class LogIn extends React.Component {
     }
   }
 
-  closeModalWindowLogIn() {
-    this.props.hideModalLogIn();
-  }
-
   openModalWindowLogIn() {
     this.props.showModalLogIn();
   }
@@ -59,12 +36,10 @@ class LogIn extends React.Component {
 
 export default connect(
   state => ({
-    password: state.password,
-    visibilityLogIn: state.visibilityLogIn
+    password: state.password
   }),
   dispatch => ({
     savePassword: (password) => dispatch({ type: "dataPassword", payload: password }),
-    hideModalLogIn: () => dispatch({ type: "visibleModalLogIn" }),
     showModalLogIn: () => dispatch({ type: "hiddenModalLogIn" })
   })
 )(LogIn);

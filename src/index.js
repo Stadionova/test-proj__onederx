@@ -52,6 +52,13 @@ function changeChartByPeriod(state = initialState, action) {
         };
     }
 
+    if (action.type === 'showFillPassword') {
+        return {
+            ...state,
+            password: action.payload
+        };
+    }
+
     if (action.type === 'TOGGLE_TWO_FACTOR') {
         return {
             ...state,

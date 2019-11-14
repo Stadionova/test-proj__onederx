@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Fontspring-DEMO-aktifoa-bold';
+  src: url("../../fonts/Fontspring-DEMO-aktifoa-bold.otf");
+}
+
+.grey {
+  color: rgb(106, 110, 110);
+  font-size: 10pt;
+}
+
+button {
+  border: none;
+  background-color: rgb(23, 25, 26);
+  color: rgb(32, 104, 255);
+  font-family: Fontspring-DEMO-publicasans-regular;
+  font-size: 8pt;
+}
+
+.value {
+  display: flex;
+}
+
+.value input {
+  background-color: rgb(23, 25, 26);
+  border: none;
+  color: rgb(218, 217, 214);
+  outline: none;
+  width: 60px;
+}
+
+.value input:active {
+  background-color: rgb(23, 25, 26);
+  outline: none;
+}
+
+.log-in h3 {
+  margin-bottom: 15px;
+}
+
+dialog {
+  background: rgba(255, 255, 255, 0.7);
+  width: 300px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.log-in__modalWindow-container {
+  margin-top: -95px;
+  width: 280px;
+  height: 300px;
+  background-color: rgb(34, 34, 36);
+  color: white;
+  margin-left: -20px;
+  position: absolute;
+}
+
+.log-in__modalWindow {
+  width: 240px;
+  height: 260px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+
+.log-in__modalWindow input {
+  background-color: rgb(34, 34, 36);
+  border: none;
+  border-bottom: solid 1px rgb(106, 110, 110);
+  color: rgb(218, 217, 214);
+  outline: none !important;
+  margin-bottom: 15px;
+}
+
+.log-in__modalWindow input:active,
+input:hover,
+input:focus {
+  outline: none !important;
+}
+
+.log-in__modalWindow span {
+  color: rgb(106, 110, 110);
+  font-size: 9pt;
+}
+
+.log-in__button-close button {
+  width: 50px;
+  height: 50px;
+  background-color: green;
+}
+
+.log-in__button-update button {
+  width: 240px;
+  height: 50px;
+  background-color: rgb(32, 104, 255);
+  color: white;
+  margin-top: 20px;
+  font-size: 12pt;
+}
+
+.log-in-close {
+  display: flex;
+}
+
+.log-in__close {
+  position: absolute;
+  right: 0;
+}
+
+.log-in__close button {
+  background-color: rgb(34, 34, 36);
+}
