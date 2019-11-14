@@ -69,14 +69,14 @@ function changeChartByPeriod(state = initialState, action) {
     if (action.type === 'visibleModal') {
         return {
             ...state,
-            visibilityUserInfo: !state.visibilityUserInfo
+            visibilityUserInfo: false
         };
     }
 
     if (action.type === 'hiddenModal') {
         return {
             ...state,
-            visibilityUserInfo: !state.visibilityUserInfo
+            visibilityUserInfo: true
         };
     }
 

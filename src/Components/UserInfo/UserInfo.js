@@ -10,7 +10,7 @@ class UserInfo extends React.Component {
       <div>
         <div className="user-info-change">
           <h3>User info</h3>
-          <div><button onClick={this.openModalWindow.bind(this)}>Change</button></div>
+          <div><button onClick={this.openModalWindow}>Change</button></div>
         </div>
         <div className='user-info-name'>
           <div className='grey'><span>Name</span></div>
@@ -25,7 +25,7 @@ class UserInfo extends React.Component {
     );
   }
 
-  openModalWindow() {
+  openModalWindow = () => {
     this.props.showModal();
   }
 

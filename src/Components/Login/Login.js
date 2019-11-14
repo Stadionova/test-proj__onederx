@@ -12,7 +12,7 @@ class LogIn extends React.Component {
         <div>
           <div className='grey'><span>Password</span></div>
           <div className='value'>
-            <div><input placeholder='password' onKeyPress={this.typePassword.bind(this)} type="password"></input></div>
+            <div><span>{lengthToStars(this.props.password.length)}</span></div>
             <div><button onClick={this.openModalWindowLogIn.bind(this)}>Change</button></div>
           </div>
         </div>
@@ -31,7 +31,10 @@ class LogIn extends React.Component {
   openModalWindowLogIn() {
     this.props.showModalLogIn();
   }
+}
 
+function lengthToStars(length) {
+  return "•".repeat(length);
 }
 
 export default connect(

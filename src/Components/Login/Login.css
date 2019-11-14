@@ -33,6 +33,10 @@ button {
   outline: none;
 }
 
+.log-in {
+  width: 200px;
+}
+
 .log-in h3 {
   margin-bottom: 15px;
 }

@@ -23,26 +23,26 @@ class ModalWindowLogIn extends React.Component {
             <div><h3>Log in</h3></div>
             <div className='log-in__close'><button className='log-in__button-close' onClick={this.closeModalWindowLogIn.bind(this)}>Cancel</button></div>
           </div>
-          <div><input placeholder='password' onKeyPress={this.typePassword.bind(this)} type="password"></input></div>
-          <div className='log-in__button-update'><button onClick={this.fillPassword.bind(this)}>Update</button></div>
+          <div><input maxlength="10" placeholder='password' onChange={this.typePassword.bind(this)} type="password" ></input></div>
+          <div className='log-in__button-update'><button onClick={this.fillPassword.bind(this)} onClick={this.closeModalWindowLogIn.bind(this)}>Update</button></div>
         </div>
       </div>
     );
   }
 
   typePassword(e) {
-    if (e.key === 'Enter') {
-      const password = e.currentTarget.value;
-      this.props.savePassword(password);
-    }
+    const password = e.currentTarget.value;
+    this.props.savePassword(password);
   }
 
   fillPassword(e) {
     const password = this.props.password;
-    this.props.showPassword(password);
+    this.props.savePassword(password);
   }
 
   closeModalWindowLogIn() {
+    const password = this.props.password;
+    this.props.savePassword(password);
     this.props.hideModalLogIn();
   }
 
