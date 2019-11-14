@@ -26,13 +26,17 @@ class UserInfo extends React.Component {
   }
 
   closeModalWindow() {
+    this.props.hideModal();
+  }
+
+  openModalWindow() {
     this.props.showModal();
   }
 
   render() {
 
     let style = {
-      visibility: 'visible'
+      visibility: ''
     }
 
     if (this.props.visibility == false) {
@@ -45,7 +49,7 @@ class UserInfo extends React.Component {
       <div className='user-info'>
         <div className="user-info-change">
           <h3>User info</h3>
-          <div><button>Change</button></div>
+          <div><button onClick={this.openModalWindow.bind(this)}>Change</button></div>
         </div>
         <div className='user-info-name'>
           <div className='grey'><span>Name</span></div>
@@ -61,7 +65,7 @@ class UserInfo extends React.Component {
         <div className='modalWindow-container' style={style} >
           <div className='modalWindow'>
             <h3>User info</h3>
-            <div><button className='button-close' onClick={this.closeModalWindow.bind(this)}>x</button></div>
+            <div><button className='button-close' onClick={this.closeModalWindow.bind(this)}>Close</button></div>
             <div><span>First name</span></div>
             <input></input>
             <div><span>Last name</span></div>
@@ -89,6 +93,7 @@ export default connect(
     showComeData: (name) => dispatch({ type: "dataCome", payload: name }),
     saveCountry: (country) => dispatch({ type: "dataCountry", payload: country }),
     saveCountryCode: (countryCode) => dispatch({ type: "dataCountryCode", payload: countryCode }),
-    showModal: () => dispatch({ type: "showVisible" })
+    hideModal: () => dispatch({ type: "visibleModal" }),
+    showModal: () => dispatch({ type: "hiddenModal" })
   })
 )(UserInfo);

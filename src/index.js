@@ -11,7 +11,7 @@ const initialState = {
     country: '',
     countryCode: '',
     able: true,
-    visibility: true
+    visibility: false
 }
 
 function changeChartByPeriod(state = initialState, action) {
@@ -50,7 +50,14 @@ function changeChartByPeriod(state = initialState, action) {
         };
     }
 
-    if (action.type === 'showVisible') {
+    if (action.type === 'visibleModal') {
+        return {
+            ...state,
+            visibility: !state.visibility
+        };
+    }
+
+    if (action.type === 'hiddenModal') {
         return {
             ...state,
             visibility: !state.visibility
