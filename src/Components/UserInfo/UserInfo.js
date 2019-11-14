@@ -39,7 +39,7 @@ class UserInfo extends React.Component {
       visibility: ''
     }
 
-    if (this.props.visibility == false) {
+    if (this.props.visibilityUserInfo == false) {
       style = {
         visibility: 'hidden'
       }
@@ -87,7 +87,7 @@ export default connect(
     country: state.country,
     countryCode: state.countryCode,
     able: state.able,
-    visibility: state.visibility
+    visibilityUserInfo: state.visibilityUserInfo
   }),
   dispatch => ({
     showComeData: (name) => dispatch({ type: "dataCome", payload: name }),

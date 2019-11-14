@@ -45,7 +45,6 @@ dialog {
 }
 
 .log-in__modalWindow-container {
-  visibility: hidden;
   margin-top: -180px;
   width: 280px;
   height: 300px;
