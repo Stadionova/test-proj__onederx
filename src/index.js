@@ -13,10 +13,11 @@ const initialState = {
     country: '',
     able: true,
     visibilityUserInfo: false,
-    visibilityLogIn: false
+    loginInEditMode: false
 }
 
 function changeChartByPeriod(state = initialState, action) {
+
     if (action.type === 'dataFirstName') {
         return {
             ...state,
@@ -83,14 +84,14 @@ function changeChartByPeriod(state = initialState, action) {
     if (action.type === 'visibleModalLogIn') {
         return {
             ...state,
-            visibilityLogIn: false
+            loginInEditMode: false
         };
     }
 
     if (action.type === 'hiddenModalLogIn') {
         return {
             ...state,
-            visibilityLogIn: true
+            loginInEditMode: true
         };
     }
 

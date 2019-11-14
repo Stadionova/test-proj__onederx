@@ -6,7 +6,10 @@ import ModalWindowLogIn from "../ModalWindowLogIn/ModalWindowLogIn";
 class LogIn extends React.Component {
 
   render() {
-    return (
+    console.log("this.props.loginInEditMode: " + this.props.loginInEditMode)
+    return this.props.loginInEditMode ?  
+    <ModalWindowLogIn />
+    :(
       <div className='log-in'>
         <div><h3>Log in</h3></div>
         <div>
@@ -16,7 +19,6 @@ class LogIn extends React.Component {
             <div className='change-button'><button onClick={this.openModalWindowLogIn.bind(this)}>Change</button></div>
           </div>
         </div>
-        <ModalWindowLogIn />
       </div>
     );
   }
@@ -39,7 +41,8 @@ function lengthToStars(length) {
 
 export default connect(
   state => ({
-    password: state.password
+    password: state.password,
+    loginInEditMode: state.loginInEditMode
   }),
   dispatch => ({
     savePassword: (password) => dispatch({ type: "dataPassword", payload: password }),

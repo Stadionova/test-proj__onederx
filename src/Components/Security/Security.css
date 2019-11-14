@@ -3,6 +3,11 @@
   src: url("../../fonts/Fontspring-DEMO-aktifoa-bold.otf");
 }
 
+.security {
+  margin-top: 20px;
+  width: 200px;
+}
+
 .grey {
   color: rgb(106, 110, 110);
   font-size: 10pt;

@@ -6,18 +6,18 @@ class ModalWindowLogIn extends React.Component {
 
   render() {
 
-    let style = {
-      visibility: ''
-    }
+    // let style = {
+    //   visibility: ''
+    // }
 
-    if (this.props.visibilityLogIn == false) {
-      style = {
-        visibility: 'hidden'
-      }
-    }
+    // if (this.props.loginInEditMode == false) {
+    //   style = {
+    //     visibility: 'hidden'
+    //   }
+    // }
 
     return (
-      <div className='log-in__modalWindow-container' style={style}>
+      <div className='log-in__modalWindow-container'>
         <div className='log-in__modalWindow'>
           <div className='log-in-close'>
             <div><h3>Log in</h3></div>
@@ -55,7 +55,7 @@ class ModalWindowLogIn extends React.Component {
 export default connect(
   state => ({
     password: state.password,
-    visibilityLogIn: state.visibilityLogIn
+    loginInEditMode: state.loginInEditMode
   }),
   dispatch => ({
     savePassword: (password) => dispatch({ type: "dataPassword", payload: password }),

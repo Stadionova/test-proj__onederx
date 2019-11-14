@@ -21,7 +21,7 @@ class UserInfo extends React.Component {
           <div className='white'><span>{this.props.country}</span></div>
         </div>
       </div>
-    ):<ModalWindowUserInfo />;
+    ) : <ModalWindowUserInfo />;
   }
 
   openModalWindow = () => {
