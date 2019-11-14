@@ -10,7 +10,8 @@ const initialState = {
     password: '',
     country: '',
     countryCode: '',
-    able: true
+    able: true,
+    visibility: true
 }
 
 function changeChartByPeriod(state = initialState, action) {
@@ -46,6 +47,13 @@ function changeChartByPeriod(state = initialState, action) {
         return {
             ...state,
             able: !state.able
+        };
+    }
+
+    if (action.type === 'showVisible') {
+        return {
+            ...state,
+            visibility: !state.visibility
         };
     }
 

@@ -2,70 +2,78 @@ import React from 'react';
 import './UserInfo.css';
 import { connect } from 'react-redux';
 
-const UserInfo = (props) => {
+class UserInfo extends React.Component {
 
-  function createNewTask(e) {
+  createNewTask(e) {
     if (e.key === 'Enter') {
       const name = e.currentTarget.value;
-      props.showComeData(name);
+      this.props.showComeData(name);
     }
   }
 
-  function typeCountry(e) {
+  typeCountry(e) {
     if (e.key === 'Enter') {
       const country = e.currentTarget.value;
-      props.saveCountry(country);
+      this.props.saveCountry(country);
     }
   }
 
-  function typeCountryCode(e) {
+  typeCountryCode(e) {
     if (e.key === 'Enter') {
       const countryCode = e.currentTarget.value;
-      props.saveCountryCode(countryCode);
+      this.props.saveCountryCode(countryCode);
     }
   }
 
-  return (
-    <div className='user-info'>
-      <div className="user-info-change">
-        <h3>User info</h3>
-        <div><button>Change</button></div>
+  closeModalWindow() {
+    this.props.showModal();
+  }
 
-        {/* <dialog open>
-          <p>Полинезийцы называют Млечны</p>
-          <p>
-            <button id="closeDialog">Закрыть окно</button>
-          </p>
-        </dialog> */}
+  render() {
 
-      </div>
-      <div className='user-info-name'>
-        <div className='grey'><span>Name</span></div>
-        <div className='white'><input type='search' placeholder='name' onKeyPress={createNewTask}></input></div>
-      </div>
-      <div className='user-info-country'>
-        <div className='grey'><span>Country of Residence</span></div>
-        <div className='white'>
-          <input type='search' placeholder='country' onKeyPress={typeCountry}></input>
-          <input type='search' placeholder='code' onKeyPress={typeCountryCode}></input>
-        </div>
-      </div>
+    let style = {
+      visibility: 'visible'
+    }
 
-      <div className='modalWindow-container'>
-        <div className='modalWindow'>
+    if (this.props.visibility == false) {
+      style = {
+        visibility: 'hidden'
+      }
+    }
+
+    return (
+      <div className='user-info'>
+        <div className="user-info-change">
           <h3>User info</h3>
-          <div><span>First name</span></div>
-          <input></input>
-          <div><span>Last name</span></div>
-          <input></input>
-          <div><span>Country of Residence</span></div>
-          <input></input>
-          <div><button id="closeDialog">Update</button></div>
+          <div><button>Change</button></div>
+        </div>
+        <div className='user-info-name'>
+          <div className='grey'><span>Name</span></div>
+          <div className='white'><input type='search' placeholder='name' onKeyPress={this.createNewTask.bind(this)}></input></div>
+        </div>
+        <div className='user-info-country'>
+          <div className='grey'><span>Country of Residence</span></div>
+          <div className='white'>
+            <input type='search' placeholder='country' onKeyPress={this.typeCountry.bind(this)}></input>
+            <input type='search' placeholder='code' onKeyPress={this.typeCountryCode.bind(this)}></input>
+          </div>
+        </div>
+        <div className='modalWindow-container' style={style} >
+          <div className='modalWindow'>
+            <h3>User info</h3>
+            <div><button className='button-close' onClick={this.closeModalWindow.bind(this)}>x</button></div>
+            <div><span>First name</span></div>
+            <input></input>
+            <div><span>Last name</span></div>
+            <input></input>
+            <div><span>Country of Residence</span></div>
+            <input></input>
+            <div className='button-update'><button>Update</button></div>
+          </div>
         </div>
       </div>
-
-    </div>
-  )
+    );
+  }
 }
 
 export default connect(
@@ -74,11 +82,13 @@ export default connect(
     password: state.password,
     country: state.country,
     countryCode: state.countryCode,
-    able: state.able
+    able: state.able,
+    visibility: state.visibility
   }),
   dispatch => ({
     showComeData: (name) => dispatch({ type: "dataCome", payload: name }),
     saveCountry: (country) => dispatch({ type: "dataCountry", payload: country }),
     saveCountryCode: (countryCode) => dispatch({ type: "dataCountryCode", payload: countryCode }),
+    showModal: () => dispatch({ type: "showVisible" })
   })
 )(UserInfo);

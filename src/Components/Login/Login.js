@@ -18,12 +18,15 @@ const LogIn = (props) => {
         <div className='grey'><span>Password</span></div>
         <div className='value'>
           <div><input placeholder='password' onKeyPress={typePassword} type="password"></input></div>
-          {/* <dialog open>
-            <p>Полинезийцы называют Млечный путь Манго-Роа-И-Ата,
-      что в переводе с маори означает «Длинная акула на рассвете».</p>
-            <p><button id="closeDialog">Закрыть окно</button></p>
-          </dialog> */}
           <div><button>Change</button></div>
+        </div>
+      </div>
+      <div className='log-in__modalWindow-container'>
+        <div className='log-in__modalWindow'>
+          <h3>Log in</h3>
+          <button className='log-in__button-close'>x</button>
+          <div><span>password</span></div>
+          <div className='log-in__button-update'><button>Update</button></div>
         </div>
       </div>
     </div>
