@@ -13,7 +13,7 @@ class LogIn extends React.Component {
           <div className='grey'><span>Password</span></div>
           <div className='value'>
             <div><span>{lengthToStars(this.props.password.length)}</span></div>
-            <div><button onClick={this.openModalWindowLogIn.bind(this)}>Change</button></div>
+            <div className='change-button'><button onClick={this.openModalWindowLogIn.bind(this)}>Change</button></div>
           </div>
         </div>
         <ModalWindowLogIn />

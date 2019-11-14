@@ -18,6 +18,7 @@ button {
 
 .value {
   display: flex;
+  position: relative;
 }
 
 .value input {
@@ -112,4 +113,9 @@ input:focus {
 
 .log-in__close button {
   background-color: rgb(34, 34, 36);
+}
+
+.change-button {
+  position: absolute;
+  left: 80px;
 }

@@ -6,8 +6,8 @@ import ModalWindowUserInfo from "../ModalWindowUserInfo/ModalWindowUserInfo";
 class UserInfo extends React.Component {
 
   render() {
-    return (
-      <div>
+    return this.props.visibilityUserInfo === false ? (
+      <div className="user-info-container">
         <div className="user-info-change">
           <h3>User info</h3>
           <div><button onClick={this.openModalWindow}>Change</button></div>
@@ -20,9 +20,8 @@ class UserInfo extends React.Component {
           <div className='grey'><span>Country of Residence</span></div>
           <div className='white'><span>{this.props.country}</span></div>
         </div>
-        <ModalWindowUserInfo />
       </div>
-    );
+    ):<ModalWindowUserInfo />;
   }
 
   openModalWindow = () => {

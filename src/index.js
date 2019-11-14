@@ -83,14 +83,14 @@ function changeChartByPeriod(state = initialState, action) {
     if (action.type === 'visibleModalLogIn') {
         return {
             ...state,
-            visibilityLogIn: !state.visibilityLogIn
+            visibilityLogIn: false
         };
     }
 
     if (action.type === 'hiddenModalLogIn') {
         return {
             ...state,
-            visibilityLogIn: !state.visibilityLogIn
+            visibilityLogIn: true
         };
     }
 

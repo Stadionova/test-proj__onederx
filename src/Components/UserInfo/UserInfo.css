@@ -5,6 +5,10 @@
   src: url("../../fonts/Fontspring-DEMO-ncttorin-bold.otf");
 }
 
+.user-info-container {
+  margin-top: 20px;
+}
+
 .user-info-change {
   display: flex;
   color: rgb(224, 223, 221);
@@ -22,17 +26,5 @@
 .white {
   color: rgb(218, 217, 214);
   margin-bottom: 30px;
-}
-
-::-webkit-input-placeholder {
-  color: rgb(218, 217, 214);
-}
-
-button:active,
-button:focus,
-button:hover {
-  outline: none !important;
-  color: rgb(143, 173, 238);
-  transition: 1s;
 }
 
