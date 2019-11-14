@@ -11,7 +11,6 @@ const initialState = {
     fullName: '',
     password: '',
     country: '',
-    countryCode: '',
     able: true,
     visibilityUserInfo: false,
     visibilityLogIn: false
@@ -43,13 +42,6 @@ function changeChartByPeriod(state = initialState, action) {
         return {
             ...state,
             country: action.payload
-        };
-    }
-
-    if (action.type === 'dataCountryCode') {
-        return {
-            ...state,
-            countryCode: action.payload
         };
     }
 

@@ -14,27 +14,6 @@
   margin-top: 15px;
 }
 
-.white input {
-  background-color: rgb(23, 25, 26);
-  border: none;
-  color: rgb(218, 217, 214);
-  outline: none;
-  width: 60px;
-}
-
-.white input:nth-child(2) {
-  color: rgb(106, 110, 110);
-}
-
-.white input:active {
-  background-color: rgb(23, 25, 26);
-  outline: none;
-}
-
-.user-info-country .white input {
-  width: 60px;
-}
-
 .grey {
   color: rgb(106, 110, 110);
   font-size: 10pt;
@@ -43,14 +22,6 @@
 .white {
   color: rgb(218, 217, 214);
   margin-bottom: 30px;
-}
-
-.user-info-country .white span {
-  color: rgb(106, 110, 110);
-}
-
-.user-info-name .white {
-  color: rgb(218, 217, 214);
 }
 
 ::-webkit-input-placeholder {
@@ -65,72 +36,3 @@ button:hover {
   transition: 1s;
 }
 
-dialog::backdrop {
-  background: rgba(8, 2, 8, 0.25);
-}
-
-dialog {
-  width: 600px;
-  height: 300px;
-  margin-right: 720px;
-}
-
-.modalWindow-container {
-  margin-top: -195px;
-  width: 280px;
-  height: 300px;
-  background-color: rgb(34, 34, 36);
-  color: white;
-  margin-left: -20px;
-  position: absolute;
-}
-
-.modalWindow {
-  width: 240px;
-  height: 260px;
-  margin: 0 auto;
-  margin-top: 20px;
-  position: relative;
-}
-
-.modalWindow input {
-  background-color: rgb(34, 34, 36);
-  border: none;
-  border-bottom: solid 1px rgb(106, 110, 110);
-  color: rgb(218, 217, 214);
-  outline: none !important;
-  margin-bottom: 15px;
-}
-
-.modalWindow input:active,
-input:hover,
-input:focus {
-  outline: none !important;
-}
-
-.modalWindow span {
-  color: rgb(106, 110, 110);
-  font-size: 9pt;
-}
-
-.button-update button {
-  width: 240px;
-  height: 50px;
-  background-color: rgb(32, 104, 255);
-  color: white;
-  margin-top: 20px;
-  font-size: 12pt;
-}
-
-.modalWindow__title-close {
-  display: flex;
-}
-
-.close {
-  position: absolute;
-  right: 0;
-}
-
-.close button {
-  background-color: rgb(34, 34, 36);
-}
