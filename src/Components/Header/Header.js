@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import Mail from "../Mail/Mail";
-import API from "../API/API";
+import Api from "../Api/Api";
 import Balance from "../Balance/Balance";
 import Margin from "../Margin/Margin";
 import PnL from "../PnL/PnL";
@@ -12,7 +12,7 @@ const Header = () => {
     <div className='header' >
       <div className="chart-1">
         <div className='chart-1__logo'><span>onederx</span></div>
-        <API />
+        <Api />
         <div className='balance-block'>
           <Balance />
           <Margin />

@@ -3,7 +3,7 @@
   src: url("../../fonts/ofont.ru_Formular.ttf");
 }
 
-.API {
+.Api {
   color: rgb(224, 223, 221);
   font-family: 'ofont.ru_Formular';
   font-size: 8pt;
@@ -27,12 +27,12 @@
   bottom: 0;
 }
 
-.API a {
+.Api a {
   color: rgb(224, 223, 221);
   text-decoration: none;
 }
 
-.API a:hover {
+.Api a:hover {
   color: rgb(32, 104, 255);
   transition: 1s;
 }
