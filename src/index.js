@@ -13,7 +13,9 @@ const initialState = {
     country: '',
     able: true,
     visibilityUserInfo: false,
-    loginInEditMode: false
+    loginInEditMode: false,
+    inputStatus: false,
+    firstNameCopy: ''
 }
 
 function changeChartByPeriod(state = initialState, action) {
@@ -21,42 +23,49 @@ function changeChartByPeriod(state = initialState, action) {
     if (action.type === 'dataFirstName') {
         return {
             ...state,
-            firstName: action.payload
+            firstName: action.payload,
+            inputStatus: true,
+            firstNameCopy: action.payload
         };
     }
 
     if (action.type === 'dataLastName') {
         return {
             ...state,
-            lastName: action.payload
+            lastName: action.payload,
+            inputStatus: true
         };
     }
 
     if (action.type === 'dataFullName') {
         return {
             ...state,
-            fullName: action.payload
+            fullName: action.payload,
+            inputStatus: true
         };
     }
 
     if (action.type === 'dataCountry') {
         return {
             ...state,
-            country: action.payload
+            country: action.payload,
+            inputStatus: true
         };
     }
 
     if (action.type === 'dataPassword') {
         return {
             ...state,
-            password: action.payload
+            password: action.payload,
+            inputStatus: true
         };
     }
 
     if (action.type === 'showFillPassword') {
         return {
             ...state,
-            password: action.payload
+            password: action.payload,
+            inputStatus: true
         };
     }
 
@@ -74,10 +83,25 @@ function changeChartByPeriod(state = initialState, action) {
         };
     }
 
+    if (action.type === 'statusInput') {
+        return {
+            ...state,
+            inputStatus: false
+        };
+    }
+
     if (action.type === 'hiddenModal') {
         return {
             ...state,
             visibilityUserInfo: true
+        };
+    }
+
+    if (action.type === 'saveData') {
+        return {
+            ...state,
+            visibilityUserInfo: false,
+            inputStatus: true
         };
     }
 

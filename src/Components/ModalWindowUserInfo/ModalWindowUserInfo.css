@@ -7,17 +7,18 @@
 
 .modalWindow-container {
   width: 280px;
-  height: 300px;
+  height: 330px;
   background-color: rgb(34, 34, 36);
   color: white;
   margin-left: -20px;
+  margin-top: 10px;
 }
 
 .modalWindow {
   width: 240px;
-  height: 260px;
+  height: 300px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
 }
 
@@ -51,19 +52,25 @@ input:hover {
   height: 50px;
   background-color: rgb(32, 104, 255);
   color: rgb(218, 217, 214);
-  margin-top: 20px;
   font-size: 12pt;
+  position: absolute;
+  bottom: 0;
 }
 
 .modalWindow__title-close {
   display: flex;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 .close {
-  position: absolute;
   right: 0;
 }
 
 .close button {
   background-color: rgb(34, 34, 36);
+}
+
+input {
+  width: 100%;
 }

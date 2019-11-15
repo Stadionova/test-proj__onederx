@@ -10,9 +10,15 @@
   width: 200px;
 }
 
+span {
+  font-size: 10pt;
+}
+
 .user-info-change {
   display: flex;
   color: rgb(224, 223, 221);
+  width: 140px;
+  position: relative;
 }
 
 .user-info-name {
@@ -27,5 +33,19 @@
 .white {
   color: rgb(218, 217, 214);
   margin-bottom: 30px;
+}
+
+button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+button:active,
+button:focus,
+button:hover {
+  outline: none !important;
+  color: rgb(143, 173, 238);
+  transition: 1s;
 }
 
