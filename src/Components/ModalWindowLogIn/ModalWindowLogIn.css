@@ -59,7 +59,7 @@
   background-color: rgb(34, 34, 36);
 }
 
-span {
+.log-in__modalWindow-container span {
   color: rgb(106, 110, 110);
   font-size: 9pt;
 }
@@ -69,4 +69,24 @@ input:active,
 input:hover {
   outline: none !important;
   border-bottom: solid 1px rgb(196, 196, 197);
+}
+
+.log-in__button-close {
+  outline: none !important;
+  color: rgb(32, 104, 255);
+  transition: 1s;
+}
+
+.log-in__button-close:active,
+.log-in__button-close:focus,
+.log-in__button-close:hover {
+  color: rgb(143, 173, 238);
+}
+
+.updateButton:active,
+.updateButton:focus,
+.updateButton:hover {
+  outline: none !important;
+  background-color: rgb(56, 91, 168);
+  transition: 1s;
 }

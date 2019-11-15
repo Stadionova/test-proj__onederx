@@ -19,7 +19,7 @@
   color: rgb(218, 217, 214);
   outline: none !important;
   margin-bottom: 15px;
-} 
+}
 
 .log-in__modalWindow input:active,
 input:hover,
@@ -44,6 +44,14 @@ input:focus {
 }
 
 .value span {
-  font-size: 10pt;
+  font-size: 12pt;
   color: rgb(218, 217, 214);
+}
+
+.buttonChange:active,
+.buttonChange:focus,
+.buttonChange:hover {
+  outline: none !important;
+  color: rgb(143, 173, 238);
+  transition: 1s;
 }

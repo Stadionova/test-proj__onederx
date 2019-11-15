@@ -16,7 +16,7 @@ const Security = (props) => {
         <div className='grey'><span>Two-Factor Authentication</span></div>
         <div className='security-buttons'>
           <div><span>{props.able ? 'Enabled' : 'Disabled'}</span></div>
-          <div><button onClick={changeAble}>{props.able ? 'Disable' : 'Enable'}</button></div>
+          <div><button className='security-buttonsChange' onClick={changeAble}>{props.able ? 'Disable' : 'Enable'}</button></div>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ class UserInfo extends React.Component {
       <div className="user-info-container">
         <div className="user-info-change">
           <h3>User info</h3>
-          <div><button onClick={this.openModalWindow}>Change</button></div>
+          <div><button className='changeButton' onClick={this.openModalWindow}>Change</button></div>
         </div>
         <div className='user-info-name'>
           <div className='grey'><span>Name</span></div>

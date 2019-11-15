@@ -6,16 +6,6 @@ class ModalWindowLogIn extends React.Component {
 
   render() {
 
-    // let style = {
-    //   visibility: ''
-    // }
-
-    // if (this.props.loginInEditMode == false) {
-    //   style = {
-    //     visibility: 'hidden'
-    //   }
-    // }
-
     return (
       <div className='log-in__modalWindow-container'>
         <div className='log-in__modalWindow'>
@@ -25,7 +15,7 @@ class ModalWindowLogIn extends React.Component {
           </div>
           <div><span>Password</span></div>
           <div><input maxlength="10" onChange={this.typePassword.bind(this)} type="password" ></input></div>
-          <div className='log-in__button-update'><button onClick={this.fillPassword.bind(this)} onClick={this.closeModalWindowLogIn.bind(this)}>Update</button></div>
+          <div className='log-in__button-update'><button className='updateButton' onClick={this.fillPassword.bind(this)} onClick={this.closeModalWindowLogIn.bind(this)}>Update</button></div>
         </div>
       </div>
     );

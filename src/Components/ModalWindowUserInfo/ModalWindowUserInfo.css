@@ -61,7 +61,8 @@ input:hover {
 
 .close {
   right: 0;
-  position: absolute;}
+  position: absolute;
+}
 
 .close button {
   background-color: rgb(34, 34, 36);
@@ -70,3 +71,24 @@ input:hover {
 input {
   width: 100%;
 }
+
+.button-close {
+  outline: none !important;
+  color: rgb(32, 104, 255);
+  transition: 1s;
+}
+
+.button-close:active,
+.button-close:focus,
+.button-close:hover {
+  color: rgb(143, 173, 238);
+}
+
+.button-update button:active,
+.button-update button:focus,
+.button-update button:hover {
+  outline: none !important;
+  background-color: rgb(56, 91, 168);
+  transition: 1s;
+}
+

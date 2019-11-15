@@ -37,9 +37,9 @@
   bottom: 0;
 }
 
-button:active,
-button:focus,
-button:hover {
+.changeButton:active,
+.changeButton:focus,
+.changeButton:hover {
   outline: none !important;
   color: rgb(143, 173, 238);
   transition: 1s;

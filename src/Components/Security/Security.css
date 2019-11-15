@@ -49,3 +49,11 @@ button {
 .security-buttons span {
   font-size: 9pt;
 }
+
+.security-buttonsChange:active,
+.security-buttonsChange:focus,
+.security-buttonsChange:hover {
+  outline: none !important;
+  color: rgb(143, 173, 238);
+  transition: 1s;
+}
