@@ -74,8 +74,8 @@ export default connect(
     fullName: state.fullName,
     password: state.password,
     country: state.country,
-    able: state.able,
-    visibilityUserInfo: state.visibilityUserInfo,
+    authentication: state.authentication,
+    userInfoEditMode: state.userInfoEditMode,
     inputStatus: state.inputStatus
   }),
   dispatch => ({

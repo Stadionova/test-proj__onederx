@@ -6,7 +6,7 @@ import ModalWindowUserInfo from "../ModalWindowUserInfo/ModalWindowUserInfo";
 class UserInfo extends React.Component {
 
   render() {
-    return this.props.visibilityUserInfo === false ? (
+    return this.props.userInfoEditMode === false ? (
       <div className="user-info-container">
         <div className="user-info-change">
           <h3>User info</h3>
@@ -34,7 +34,7 @@ export default connect(
   state => ({
     fullName: state.fullName,
     country: state.country,
-    visibilityUserInfo: state.visibilityUserInfo
+    userInfoEditMode: state.userInfoEditMode
   }),
   dispatch => ({
     showFullName: (fullName) => dispatch({ type: "DATA_FULL_NAME", payload: fullName }),

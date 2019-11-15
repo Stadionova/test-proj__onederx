@@ -11,10 +11,9 @@ const initialState = {
     fullName: '',
     password: '',
     country: '',
-    able: true,
-    visibilityUserInfo: false,
-    loginInEditMode: false,
-    firstNameCopy: ''
+    authentication: true,
+    userInfoEditMode: false,
+    loginInEditMode: false
 }
 
 function createStoreUser(state = initialState, action) {
@@ -31,69 +30,63 @@ function createStoreUser(state = initialState, action) {
     if (action.type === 'DATA_LAST_NAME') {
         return {
             ...state,
-            lastName: action.payload,
-            inputStatus: true
+            lastName: action.payload
         };
     }
 
     if (action.type === 'DATA_FULL_NAME') {
         return {
             ...state,
-            fullName: action.payload,
-            inputStatus: true
+            fullName: action.payload
         };
     }
 
     if (action.type === 'DATA_COUNTRY') {
         return {
             ...state,
-            country: action.payload,
-            inputStatus: true
+            country: action.payload
         };
     }
 
     if (action.type === 'DATA_PASSWORD') {
         return {
             ...state,
-            password: action.payload,
-            inputStatus: true
+            password: action.payload
         };
     }
 
     if (action.type === 'SHOW_BULLET_PASSWORD') {
         return {
             ...state,
-            password: action.payload,
-            inputStatus: true
+            password: action.payload
         };
     }
 
     if (action.type === 'TOGGLE_TWO_FACTOR') {
         return {
             ...state,
-            able: !state.able
+            authentication: !state.authentication
         };
     }
 
     if (action.type === 'HIDE_CHANGE_WINDOW') {
         return {
             ...state,
-            visibilityUserInfo: false
+            userInfoEditMode: false
         };
     }
 
     if (action.type === 'SHOW_CHANGE_WINDOW') {
         return {
             ...state,
-            visibilityUserInfo: true
+            userInfoEditMode: true
         };
     }
 
     if (action.type === 'UPDATE_BUTTON') {
         return {
             ...state,
-            visibilityUserInfo: false,
-            inputStatus: true
+            userInfoEditMode: false
         };
     }
 

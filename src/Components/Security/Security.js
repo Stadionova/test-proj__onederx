@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 const Security = (props) => {
 
   function changeAble(event) {
-    const able = event.currentTarget.value;
-    props.showAble(able);
+    const authentication = event.currentTarget.value;
+    props.showAble(authentication);
   }
 
   return (
@@ -15,8 +15,8 @@ const Security = (props) => {
       <div>
         <div className='grey'><span>Two-Factor Authentication</span></div>
         <div className='security-buttons'>
-          <div><span>{props.able ? 'Enabled' : 'Disabled'}</span></div>
-          <div><button className='security-buttonsChange' onClick={changeAble}>{props.able ? 'Disable' : 'Enable'}</button></div>
+          <div><span>{props.authentication ? 'Enabled' : 'Disabled'}</span></div>
+          <div><button className='security-buttonsChange' onClick={changeAble}>{props.authentication ? 'Disable' : 'Enable'}</button></div>
         </div>
       </div>
     </div>
@@ -25,9 +25,9 @@ const Security = (props) => {
 
 export default connect(
   state => ({
-    able: state.able
+    authentication: state.authentication
   }),
   dispatch => ({
-    showAble: (able) => dispatch({ type: "TOGGLE_TWO_FACTOR", payload: able })
+    showAble: (authentication) => dispatch({ type: "TOGGLE_TWO_FACTOR", payload: authentication })
   })
 )(Security);
