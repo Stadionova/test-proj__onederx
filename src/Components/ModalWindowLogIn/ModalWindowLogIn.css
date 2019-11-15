@@ -5,24 +5,18 @@
 
 .log-in__modalWindow-container {
   width: 280px;
-  height: 300px;
+  height: 330px;
   background-color: rgb(34, 34, 36);
   color: white;
-  margin-left: -20px;
+  margin-top: 10px;
 }
 
 .log-in__modalWindow {
   width: 240px;
-  height: 260px;
+  height: 300px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
-}
-
-.log-in__button-close button {
-  width: 50px;
-  height: 50px;
-  background-color: green;
 }
 
 .log-in__button-update button {
@@ -36,10 +30,43 @@
 
 .log-in__close {
   display: flex;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.log-in-close {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.log-in__close__button {
   position: absolute;
+  bottom: 0;
   right: 0;
 }
 
 .log-in__close button {
   background-color: rgb(34, 34, 36);
+}
+
+.log-in__button-update {
+  position: absolute;
+  bottom: 0;
+}
+
+.log-in__button-close {
+  border: none;
+  background-color: rgb(34, 34, 36);
+}
+
+span {
+  color: rgb(106, 110, 110);
+  font-size: 9pt;
+}
+
+.log-in__modalWindow 
+input:active,
+input:hover {
+  outline: none !important;
+  border-bottom: solid 1px rgb(196, 196, 197);
 }

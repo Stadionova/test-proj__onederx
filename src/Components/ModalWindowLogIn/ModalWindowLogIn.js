@@ -21,9 +21,10 @@ class ModalWindowLogIn extends React.Component {
         <div className='log-in__modalWindow'>
           <div className='log-in-close'>
             <div><h3>Log in</h3></div>
-            <div className='log-in__close'><button className='log-in__button-close' onClick={this.closeModalWindowLogIn.bind(this)}>Cancel</button></div>
+            <div className='log-in__close__button'><button className='log-in__button-close' onClick={this.closeModalWindowLogIn.bind(this)}>Cancel</button></div>
           </div>
-          <div><input maxlength="10" placeholder='password' onChange={this.typePassword.bind(this)} type="password" ></input></div>
+          <div><span>Password</span></div>
+          <div><input maxlength="10" onChange={this.typePassword.bind(this)} type="password" ></input></div>
           <div className='log-in__button-update'><button onClick={this.fillPassword.bind(this)} onClick={this.closeModalWindowLogIn.bind(this)}>Update</button></div>
         </div>
       </div>

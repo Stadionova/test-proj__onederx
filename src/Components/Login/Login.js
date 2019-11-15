@@ -6,21 +6,20 @@ import ModalWindowLogIn from "../ModalWindowLogIn/ModalWindowLogIn";
 class LogIn extends React.Component {
 
   render() {
-    console.log("this.props.loginInEditMode: " + this.props.loginInEditMode)
-    return this.props.loginInEditMode ?  
-    <ModalWindowLogIn />
-    :(
-      <div className='log-in'>
-        <div><h3>Log in</h3></div>
-        <div>
-          <div className='grey'><span>Password</span></div>
-          <div className='value'>
-            <div><span>{lengthToStars(this.props.password.length)}</span></div>
-            <div className='change-button'><button onClick={this.openModalWindowLogIn.bind(this)}>Change</button></div>
+    return this.props.loginInEditMode ?
+      <ModalWindowLogIn />
+      : (
+        <div className='log-in'>
+          <div><h3>Log in</h3></div>
+          <div className='inputAndButton'>
+            <div className='grey'><span>Password</span></div>
+            <div className='value'>
+              <div><span>{lengthToStars(this.props.password.length)}</span></div>
+              <div className='change-button'><button onClick={this.openModalWindowLogIn.bind(this)}>Change</button></div>
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
   }
 
   typePassword(e) {

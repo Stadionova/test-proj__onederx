@@ -31,10 +31,6 @@
   margin-bottom: 15px;
 }
 
-::-webkit-input-placeholder {
-  color: rgb(196, 196, 197);
-}
-
 .modalWindow 
 input:active,
 input:hover {
@@ -65,7 +61,7 @@ input:hover {
 
 .close {
   right: 0;
-}
+  position: absolute;}
 
 .close button {
   background-color: rgb(34, 34, 36);
