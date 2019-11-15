@@ -79,12 +79,11 @@ export default connect(
     inputStatus: state.inputStatus
   }),
   dispatch => ({
-    showFirstName: (firstName, firstNameCopy) => dispatch({ type: "dataFirstName", payload: firstName, firstNameCopy }),
-    showLastName: (lastName) => dispatch({ type: "dataLastName", payload: lastName }),
-    showFullName: (fullName) => dispatch({ type: "dataFullName", payload: fullName }),
-    saveCountry: (country) => dispatch({ type: "dataCountry", payload: country }),
-    hideModal: (country, fullName, inputStatus, firstName) => dispatch({ type: "visibleModal", payload: country, fullName, inputStatus, firstName }),
-    changeInputStatus: (inputStatus) => dispatch({ type: "statusInput", payload: inputStatus }),
-    hideModalAndSaveData: () => dispatch({ type: "saveData" })
+    showFirstName: (firstName, firstNameCopy) => dispatch({ type: "DATA_FIRST_NAME", payload: firstName, firstNameCopy }),
+    showLastName: (lastName) => dispatch({ type: "DATA_LAST_NAME", payload: lastName }),
+    showFullName: (fullName) => dispatch({ type: "DATA_FULL_NAME", payload: fullName }),
+    saveCountry: (country) => dispatch({ type: "DATA_COUNTRY", payload: country }),
+    hideModal: (country, fullName, inputStatus, firstName) => dispatch({ type: "HIDE_CHANGE_WINDOW", payload: country, fullName, inputStatus, firstName }),
+    hideModalAndSaveData: () => dispatch({ type: "UPDATE_BUTTON" })
   })
 )(ModalWindowUserInfo);

@@ -14,13 +14,12 @@ const initialState = {
     able: true,
     visibilityUserInfo: false,
     loginInEditMode: false,
-    inputStatus: false,
     firstNameCopy: ''
 }
 
-function changeChartByPeriod(state = initialState, action) {
+function createStoreUser(state = initialState, action) {
 
-    if (action.type === 'dataFirstName') {
+    if (action.type === 'DATA_FIRST_NAME') {
         return {
             ...state,
             firstName: action.payload,
@@ -29,7 +28,7 @@ function changeChartByPeriod(state = initialState, action) {
         };
     }
 
-    if (action.type === 'dataLastName') {
+    if (action.type === 'DATA_LAST_NAME') {
         return {
             ...state,
             lastName: action.payload,
@@ -37,7 +36,7 @@ function changeChartByPeriod(state = initialState, action) {
         };
     }
 
-    if (action.type === 'dataFullName') {
+    if (action.type === 'DATA_FULL_NAME') {
         return {
             ...state,
             fullName: action.payload,
@@ -45,7 +44,7 @@ function changeChartByPeriod(state = initialState, action) {
         };
     }
 
-    if (action.type === 'dataCountry') {
+    if (action.type === 'DATA_COUNTRY') {
         return {
             ...state,
             country: action.payload,
@@ -53,7 +52,7 @@ function changeChartByPeriod(state = initialState, action) {
         };
     }
 
-    if (action.type === 'dataPassword') {
+    if (action.type === 'DATA_PASSWORD') {
         return {
             ...state,
             password: action.payload,
@@ -61,7 +60,7 @@ function changeChartByPeriod(state = initialState, action) {
         };
     }
 
-    if (action.type === 'showFillPassword') {
+    if (action.type === 'SHOW_BULLET_PASSWORD') {
         return {
             ...state,
             password: action.payload,
@@ -76,28 +75,21 @@ function changeChartByPeriod(state = initialState, action) {
         };
     }
 
-    if (action.type === 'visibleModal') {
+    if (action.type === 'HIDE_CHANGE_WINDOW') {
         return {
             ...state,
             visibilityUserInfo: false
         };
     }
 
-    if (action.type === 'statusInput') {
-        return {
-            ...state,
-            inputStatus: false
-        };
-    }
-
-    if (action.type === 'hiddenModal') {
+    if (action.type === 'SHOW_CHANGE_WINDOW') {
         return {
             ...state,
             visibilityUserInfo: true
         };
     }
 
-    if (action.type === 'saveData') {
+    if (action.type === 'UPDATE_BUTTON') {
         return {
             ...state,
             visibilityUserInfo: false,
@@ -105,14 +97,14 @@ function changeChartByPeriod(state = initialState, action) {
         };
     }
 
-    if (action.type === 'visibleModalLogIn') {
+    if (action.type === 'CHANGE_WINDOW_LOGIN-STATUS_FALSE') {
         return {
             ...state,
             loginInEditMode: false
         };
     }
 
-    if (action.type === 'hiddenModalLogIn') {
+    if (action.type === 'CHANGE_WINDOW_LOGIN_STATUS_TRUE') {
         return {
             ...state,
             loginInEditMode: true
@@ -122,7 +114,7 @@ function changeChartByPeriod(state = initialState, action) {
     return state;
 }
 
-const store = createStore(changeChartByPeriod);
+const store = createStore(createStoreUser);
 
 store.subscribe(() => {
     console.log(store.getState());

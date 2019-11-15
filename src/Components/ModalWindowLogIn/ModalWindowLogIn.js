@@ -37,10 +37,6 @@ class ModalWindowLogIn extends React.Component {
     this.props.hideModalLogIn();
   }
 
-  openModalWindowLogIn() {
-    this.props.showModalLogIn();
-  }
-
 }
 
 export default connect(
@@ -49,9 +45,8 @@ export default connect(
     loginInEditMode: state.loginInEditMode
   }),
   dispatch => ({
-    savePassword: (password) => dispatch({ type: "dataPassword", payload: password }),
-    hideModalLogIn: () => dispatch({ type: "visibleModalLogIn" }),
-    showModalLogIn: () => dispatch({ type: "hiddenModalLogIn" }),
-    showPassword: (password) => dispatch({ type: "showFillPassword", payload: password })
+    savePassword: (password) => dispatch({ type: "DATA_PASSWORD", payload: password }),
+    hideModalLogIn: () => dispatch({ type: "CHANGE_WINDOW_LOGIN-STATUS_FALSE" }),
+    savePassword: (password) => dispatch({ type: "SHOW_BULLET_PASSWORD", payload: password })
   })
 )(ModalWindowLogIn);

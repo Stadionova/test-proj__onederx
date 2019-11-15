@@ -36,3 +36,7 @@ h3 {
   margin: 0;
   font-family: HarmoniaSansProCyr-Bold;
 }
+
+.title h3 {
+  font-size: 26pt;
+}

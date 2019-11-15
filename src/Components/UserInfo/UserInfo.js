@@ -37,8 +37,8 @@ export default connect(
     visibilityUserInfo: state.visibilityUserInfo
   }),
   dispatch => ({
-    showFullName: (fullName) => dispatch({ type: "dataFullName", payload: fullName }),
-    saveCountry: (country) => dispatch({ type: "dataCountry", payload: country }),
-    showModal: (fullName, country) => dispatch({ type: "hiddenModal", payload: fullName, country })
+    showFullName: (fullName) => dispatch({ type: "DATA_FULL_NAME", payload: fullName }),
+    saveCountry: (country) => dispatch({ type: "DATA_COUNTRY", payload: country }),
+    showModal: (fullName, country) => dispatch({ type: "SHOW_CHANGE_WINDOW", payload: fullName, country })
   })
 )(UserInfo);

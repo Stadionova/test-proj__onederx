@@ -44,7 +44,7 @@ export default connect(
     loginInEditMode: state.loginInEditMode
   }),
   dispatch => ({
-    savePassword: (password) => dispatch({ type: "dataPassword", payload: password }),
-    showModalLogIn: () => dispatch({ type: "hiddenModalLogIn" })
+    savePassword: (password) => dispatch({ type: "DATA_PASSWORD", payload: password }),
+    showModalLogIn: () => dispatch({ type: "CHANGE_WINDOW_LOGIN_STATUS_TRUE" })
   })
 )(LogIn);
