@@ -9,11 +9,11 @@ import PnL from "../PnL/PnL";
 const Header = () => {
 
   return (
-    <div className='header' >
-      <div className="chart-1">
-        <div className='chart-1__logo'><span>onederx</span></div>
+    <div className='container-header' >
+      <div className="header">
+        <div className='header__logo'><span>onederx</span></div>
         <Api />
-        <div className='balance-block'>
+        <div className='header__balance'>
           <Balance />
           <Margin />
           <PnL />

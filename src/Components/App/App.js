@@ -7,9 +7,9 @@ const App = () => {
 
   return (
     <div className='containerApp'>
-      <div className='container-grid'>
+      <div className='containerApp-grid'>
         <div class="containerApp__account">
-          <div className='header-block'>
+          <div className='containerApp-header'>
             <Header />
           </div>
           <AccountSetting />
