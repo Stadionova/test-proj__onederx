@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from "../Header/Header";
-import Main from "../Main/Main";
+import AccountSetting from "../AccountSetting/AccountSetting";
 
 const App = () => {
 
@@ -12,7 +12,7 @@ const App = () => {
           <div className='header-block'>
             <Header />
           </div>
-          <Main />
+          <AccountSetting />
         </div>
       </div>
     </div>

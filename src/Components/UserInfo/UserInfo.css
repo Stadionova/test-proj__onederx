@@ -6,7 +6,7 @@
 }
 
 .user-info-container {
-  margin-top: 20px;
+  margin-top: 10px;
   width: 200px;
 }
 
@@ -15,6 +15,7 @@
   color: rgb(224, 223, 221);
   width: 140px;
   position: relative;
+  height: 42px;
 }
 
 .user-info-name {
