@@ -3,25 +3,31 @@
   src: url("../../fonts/ofont.ru_Formular.ttf");
 }
 
-.PnL {
+.pnl__container {
   width: 150px;
   font-family: 'ofont.ru_Formular';
   font-size: 8pt;
 }
 
-.unrealised {
+.pnl__unrealised {
   color: rgb(231, 230, 227);
 }
 
-.PnL span:nth-child(1) {
+.pnl__container span:nth-child(1) {
   margin-bottom: 1px;
 }
 
-.PnL img {
+.pnl__container img {
   width: 50px;
   height: 12px;
 }
 
-.PnL span:nth-child(2) {
+.pnl__container span:nth-child(2) {
   color: green;
 }
+
+
+
+
+
+
