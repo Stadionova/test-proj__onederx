@@ -5,10 +5,12 @@ import { connect } from 'react-redux';
 class EditModeLogIn extends React.Component {
 
   state = {
-    inputPassword: ''
+    password: this.props.password
   }
 
   render() {
+
+    console.log(this.state);
 
     return (
       <div className='logIn__editContainer'>
@@ -21,7 +23,7 @@ class EditModeLogIn extends React.Component {
           </div>
           <div><span>Password</span></div>
           <div>
-            <input maxlength="10" onChange={this.typePassword} type="password" ></input>
+            <input maxlength="10" onChange={this.typePassword} value={this.state.password} type="password" ></input>
           </div>
           <div className='logIn__update-button'>
             <button onClick={this.updateModalWindowLogIn}>Update</button>
@@ -34,19 +36,19 @@ class EditModeLogIn extends React.Component {
   typePassword = (e) => {
     const password = e.currentTarget.value;
     this.setState({
-      inputPassword: password
+      password: password
     });
   }
 
   closeEditModeLogIn = () => {
     this.props.hideEditModeLogIn();
     this.setState({
-      inputPassword: ''
+      password: ''
     });
   }
 
   updateModalWindowLogIn = () => {
-    this.props.saveAndClosePassword(this.state.inputPassword);
+    this.props.saveAndClosePassword(this.state.password);
   }
 
 }

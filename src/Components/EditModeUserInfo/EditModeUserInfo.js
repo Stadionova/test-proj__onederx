@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 
 class EditModeUserInfo extends React.Component {
 
+  // state = {
+  //   country: this.props.country
+  // }
+
   render() {
 
     return (
