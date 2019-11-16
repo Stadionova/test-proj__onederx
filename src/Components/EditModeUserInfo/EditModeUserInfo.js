@@ -4,9 +4,11 @@ import { connect } from 'react-redux';
 
 class EditModeUserInfo extends React.Component {
 
-  // state = {
-  //   country: this.props.country
-  // }
+  state = {
+    country: this.props.country,
+    firstName: this.props.firstName,
+    lastName: this.props.lastName
+  }
 
   render() {
 
@@ -21,15 +23,15 @@ class EditModeUserInfo extends React.Component {
           </div>
           <div>
             <div><span>First name</span></div>
-            <input maxlength="10" type='search' value={this.props.firstName} onChange={this.typeFirstName}></input>
+            <input maxlength="10" type='search' value={this.state.firstName} onChange={this.typeFirstName}></input>
           </div>
           <div>
             <div><span>Last name</span></div>
-            <input maxlength="10" type='search' value={this.props.lastName} onChange={this.typeLastName}></input>
+            <input maxlength="10" type='search' value={this.state.lastName} onChange={this.typeLastName}></input>
           </div>
           <div>
             <div><span>Country of Residence</span></div>
-            <input maxlength="15" type='search' value={this.props.country} onChange={this.typeCountry}></input>
+            <input maxlength="15" type='search' value={this.state.country} onChange={this.typeCountry}></input>
           </div>
           <div className='editModeUserInfo__update'>
             <button onClick={this.closeModalWindowAndSave}>Update</button>
@@ -41,26 +43,34 @@ class EditModeUserInfo extends React.Component {
 
   typeFirstName = (e) => {
     const firstName = e.currentTarget.value;
-    this.props.saveFirstName(firstName);
+    this.setState({
+      firstName: firstName
+    });
   }
 
   typeLastName = (e) => {
     const lastName = e.currentTarget.value;
-    this.props.saveLastName(lastName);
+    this.setState({
+      lastName: lastName
+    });
   }
 
   typeCountry = (e) => {
     const country = e.currentTarget.value;
-    this.props.saveCountry(country);
+    this.setState({
+      country: country
+    });
   }
 
   fillFullData = () => {
-    const firstName = this.props.firstName;
-    const lastName = this.props.lastName;
-    const country = this.props.country;
+    const firstName = this.state.firstName;
+    const lastName = this.state.lastName;
+    const country = this.state.country;
     const fullName = firstName + ' ' + lastName;
     this.props.saveFullName(fullName);
     this.props.saveCountry(country);
+    this.props.saveFirstName(firstName);
+    this.props.saveLastName(lastName);
   }
 
   closeModalWindowAndSave = () => {
@@ -70,6 +80,11 @@ class EditModeUserInfo extends React.Component {
 
   closeModalWindow = () => {
     this.props.editModeUserInfoCancel();
+    this.setState({
+      country: ''
+      // firstName: '',
+      // lastName: ''
+    });
   }
 
 }
