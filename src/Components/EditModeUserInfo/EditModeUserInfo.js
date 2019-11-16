@@ -37,8 +37,7 @@ class EditModeUserInfo extends React.Component {
 
   typeFirstName = (e) => {
     const firstName = e.currentTarget.value;
-    const firstNameCopy = firstName;
-    this.props.saveFirstName(firstName, firstNameCopy);
+    this.props.saveFirstName(firstName);
   }
 
   typeLastName = (e) => {
@@ -80,7 +79,7 @@ export default connect(
     country: state.country
   }),
   dispatch => ({
-    saveFirstName: (firstName, firstNameCopy) => dispatch({ type: "DATA_FIRST_NAME", payload: firstName, firstNameCopy }),
+    saveFirstName: (firstName) => dispatch({ type: "DATA_FIRST_NAME", payload: firstName }),
     saveLastName: (lastName) => dispatch({ type: "DATA_LAST_NAME", payload: lastName }),
     saveFullName: (fullName) => dispatch({ type: "DATA_FULL_NAME", payload: fullName }),
     saveCountry: (country) => dispatch({ type: "DATA_COUNTRY", payload: country }),

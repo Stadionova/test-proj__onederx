@@ -20,7 +20,7 @@ class EditModeLogIn extends React.Component {
             <input maxlength="10" onChange={this.typePassword} type="password" ></input>
           </div>
           <div className='logIn__update-button'>
-            <button onClick={this.closeModalWindowLogIn}>Update</button>
+            <button onClick={this.updateModalWindowLogIn}>Update</button>
           </div>
         </div>
       </div>
@@ -33,9 +33,16 @@ class EditModeLogIn extends React.Component {
   }
 
   closeModalWindowLogIn = () => {
-    const password = this.props.password;
-    this.props.savePassword(password);
+    if (!this.props.inputStatus) {
+      const password = '';
+      this.props.savePassword(password);
+      this.props.hideModalLogIn();
+    }
     this.props.hideModalLogIn();
+  }
+
+  updateModalWindowLogIn = () => {
+    this.props.saveAndClosePassword(this.props.password);
   }
 
 }
@@ -46,6 +53,8 @@ export default connect(
   }),
   dispatch => ({
     savePassword: (password) => dispatch({ type: "DATA_PASSWORD", payload: password }),
-    hideModalLogIn: () => dispatch({ type: "CHANGE_WINDOW_LOGIN-STATUS_FALSE" })
+    hideModalLogIn: () => dispatch({ type: "CHANGE_WINDOW_LOGIN-STATUS_FALSE" }),
+    updateModalWindowLogIn: (password) => dispatch({ type: "UPDATE_WINDOW_LOGIN", payload: password }),
+    saveAndClosePassword: (password) => dispatch({ type: "SAVE_AND_CLOSE", payload: password }),
   })
 )(EditModeLogIn);

@@ -13,7 +13,8 @@ const initialState = {
     country: '',
     authentication: true,
     userInfoEditMode: false,
-    loginInEditMode: false
+    loginInEditMode: false,
+    inputStatus: false
 }
 
 function createStoreUser(state = initialState, action) {
@@ -52,6 +53,14 @@ function createStoreUser(state = initialState, action) {
         return {
             ...state,
             password: action.payload
+        };
+    }
+
+    if (action.type === 'SAVE_AND_CLOSE') {
+        return {
+            ...state,
+            loginInEditMode: false,
+            inputStatus: true
         };
     }
 
@@ -94,6 +103,13 @@ function createStoreUser(state = initialState, action) {
         return {
             ...state,
             loginInEditMode: true
+        };
+    }
+
+    if (action.type === 'UPDATE_WINDOW_LOGIN') {
+        return {
+            ...state,
+            password: action.payload
         };
     }
 
