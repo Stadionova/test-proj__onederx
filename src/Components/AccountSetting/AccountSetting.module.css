@@ -34,5 +34,11 @@
   justify-content: space-between;
 }
 
-
+button {
+  border: none;
+  background-color: rgb(23, 25, 26);
+  color: rgb(32, 104, 255);
+  font-family: Fontspring-DEMO-publicasans-regular;
+  font-size: 8pt;
+}
 

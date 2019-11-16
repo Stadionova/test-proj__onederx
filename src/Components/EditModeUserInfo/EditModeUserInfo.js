@@ -1,17 +1,19 @@
 import React from 'react';
-import './ModalWindowUserInfo.css';
+import './EditModeUserInfo.css';
 import { connect } from 'react-redux';
 
-class ModalWindowUserInfo extends React.Component {
+class EditModeUserInfo extends React.Component {
 
   render() {
 
     return (
-      <div className='modalWindow-container' >
-        <div className='modalWindow'>
-          <div className='modalWindow__title-close'>
+      <div className='editModeUserInfo-container' >
+        <div className='editModeUserInfo'>
+          <div className='editModeUserInfo__title'>
             <div><h3>User info</h3></div>
-            <div className='close'><button className='button-close' onClick={this.closeModalWindow}>Cancel</button></div>
+            <div className='editModeUserInfo__close'>
+              <button onClick={this.closeModalWindow}>Cancel</button>
+            </div>
           </div>
           <div>
             <div><span>First name</span></div>
@@ -25,7 +27,9 @@ class ModalWindowUserInfo extends React.Component {
             <div><span>Country of Residence</span></div>
             <input maxlength="15" type='search' value={this.props.country} onChange={this.typeCountry}></input>
           </div>
-          <div className='button-update'><button onClick={this.closeModalWindowAndSave}>Update</button></div>
+          <div className='editModeUserInfo__update'>
+            <button onClick={this.closeModalWindowAndSave}>Update</button>
+          </div>
         </div>
       </div>
     );
@@ -34,12 +38,12 @@ class ModalWindowUserInfo extends React.Component {
   typeFirstName = (e) => {
     const firstName = e.currentTarget.value;
     const firstNameCopy = firstName;
-    this.props.showFirstName(firstName, firstNameCopy);
+    this.props.saveFirstName(firstName, firstNameCopy);
   }
 
   typeLastName = (e) => {
     const lastName = e.currentTarget.value;
-    this.props.showLastName(lastName);
+    this.props.saveLastName(lastName);
   }
 
   typeCountry = (e) => {
@@ -52,17 +56,17 @@ class ModalWindowUserInfo extends React.Component {
     const lastName = this.props.lastName;
     const country = this.props.country;
     const fullName = firstName + ' ' + lastName;
-    this.props.showFullName(fullName);
+    this.props.saveFullName(fullName);
     this.props.saveCountry(country);
   }
 
   closeModalWindowAndSave = () => {
     this.fillFullData();
-    this.props.hideModalAndSaveData();
+    this.props.editModeUserInfoUpdate();
   }
 
   closeModalWindow = () => {
-    this.props.hideModal();
+    this.props.editModeUserInfoCancel();
   }
 
 }
@@ -73,17 +77,14 @@ export default connect(
     lastName: state.lastName,
     fullName: state.fullName,
     password: state.password,
-    country: state.country,
-    authentication: state.authentication,
-    userInfoEditMode: state.userInfoEditMode,
-    inputStatus: state.inputStatus
+    country: state.country
   }),
   dispatch => ({
-    showFirstName: (firstName, firstNameCopy) => dispatch({ type: "DATA_FIRST_NAME", payload: firstName, firstNameCopy }),
-    showLastName: (lastName) => dispatch({ type: "DATA_LAST_NAME", payload: lastName }),
-    showFullName: (fullName) => dispatch({ type: "DATA_FULL_NAME", payload: fullName }),
+    saveFirstName: (firstName, firstNameCopy) => dispatch({ type: "DATA_FIRST_NAME", payload: firstName, firstNameCopy }),
+    saveLastName: (lastName) => dispatch({ type: "DATA_LAST_NAME", payload: lastName }),
+    saveFullName: (fullName) => dispatch({ type: "DATA_FULL_NAME", payload: fullName }),
     saveCountry: (country) => dispatch({ type: "DATA_COUNTRY", payload: country }),
-    hideModal: (country, fullName, inputStatus, firstName) => dispatch({ type: "HIDE_CHANGE_WINDOW", payload: country, fullName, inputStatus, firstName }),
-    hideModalAndSaveData: () => dispatch({ type: "UPDATE_BUTTON" })
+    editModeUserInfoCancel: (country, fullName, inputStatus, firstName) => dispatch({ type: "HIDE_CHANGE_WINDOW", payload: country, fullName, inputStatus, firstName }),
+    editModeUserInfoUpdate: () => dispatch({ type: "UPDATE_BUTTON" })
   })
-)(ModalWindowUserInfo);
+)(EditModeUserInfo);

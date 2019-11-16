@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserInfo.css';
 import { connect } from 'react-redux';
-import ModalWindowUserInfo from "../ModalWindowUserInfo/ModalWindowUserInfo";
+import EditModeUserInfo from "../EditModeUserInfo/EditModeUserInfo";
 
 class UserInfo extends React.Component {
 
@@ -21,7 +21,7 @@ class UserInfo extends React.Component {
           <div className='userInfo__country'><span>{this.props.country}</span></div>
         </div>
       </div>
-    ) : <ModalWindowUserInfo />;
+    ) : <EditModeUserInfo />;
   }
 
   openModalWindow = () => {

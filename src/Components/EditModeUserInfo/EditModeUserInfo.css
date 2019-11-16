@@ -1,0 +1,81 @@
+.editModeUserInfo-container {
+  width: 280px;
+  height: 330px;
+  background-color: rgb(34, 34, 36);
+  color: white;
+  margin-left: -20px;
+  margin-top: 10px;
+}
+
+.editModeUserInfo {
+  width: 240px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.editModeUserInfo 
+input:active,
+input:hover {
+  outline: none !important;
+  border-bottom: solid 1px rgb(196, 196, 197);
+}
+
+.editModeUserInfo span {
+  color: rgb(106, 110, 110);
+  font-size: 9pt;
+}
+
+.editModeUserInfo input {
+  background-color: rgb(34, 34, 36);
+  border: none;
+  border-bottom: solid 1px rgb(106, 110, 110);
+  color: rgb(196, 196, 197);
+  outline: none !important;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.editModeUserInfo__title {
+  display: flex;
+  margin-bottom: 10px;
+  position: relative;
+  height: 41px;
+}
+
+.editModeUserInfo__close {
+  right: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.editModeUserInfo__close button {
+  outline: none !important;
+  color: rgb(32, 104, 255);
+  transition: 1s;
+  background-color: rgb(34, 34, 36);
+}
+
+.editModeUserInfo__close button:active,
+.editModeUserInfo__close button:focus,
+.editModeUserInfo__close button:hover {
+  color: rgb(143, 173, 238);
+}
+
+.editModeUserInfo__update button {
+  width: 240px;
+  height: 50px;
+  background-color: rgb(32, 104, 255);
+  color: white;
+  margin-top: 20px;
+  font-size: 12pt;
+}
+
+.editModeUserInfo__update button:active,
+.editModeUserInfo__update button:focus,
+.editModeUserInfo__update button:hover {
+  outline: none !important;
+  background-color: rgb(56, 91, 168);
+  transition: 1s;
+}
+
