@@ -1,56 +1,36 @@
-@font-face {
-  font-family: 'Fontspring-DEMO-aktifoa-bold';
-  src: url("../../fonts/Fontspring-DEMO-aktifoa-bold.otf");
-}
-
-.log-in {
+.logIn__container {
   width: 200px;
   margin-top: 10px;
 }
 
-.log-in h3 {
+.logIn__container h3 {
   margin-bottom: 15px;
 }
 
-.log-in__modalWindow input {
-  background-color: rgb(34, 34, 36);
-  border: none;
-  border-bottom: solid 1px rgb(106, 110, 110);
-  color: rgb(218, 217, 214);
-  outline: none !important;
-  margin-bottom: 15px;
+.logIn__name {
+  position: relative;
+  width: 120px;
 }
 
-.log-in__modalWindow input:active,
-input:hover,
-input:focus {
-  outline: none !important;
+.logIn__value span {
+  font-size: 12pt;
+  color: rgb(231, 230, 227);
 }
 
-.change-button {
+.logIn__change {
   position: absolute;
   right: 0;
 }
 
-.change-button button {
+.logIn__change button {
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-.inputAndButton {
-  position: relative;
-  width: 120px;
-}
-
-.value span {
-  font-size: 12pt;
-  color: rgb(231, 230, 227);
-}
-
-.buttonChange:active,
-.buttonChange:focus,
-.buttonChange:hover {
+.logIn__change button:active,
+.logIn__change button:focus,
+.logIn__change button:hover {
   outline: none !important;
   color: rgb(143, 173, 238);
   transition: 1s;

@@ -13,9 +13,8 @@
 
 .log-in__modalWindow {
   width: 240px;
-  height: 300px;
+  height: 279px;
   margin: 0 auto;
-  margin-top: 10px;
   position: relative;
 }
 
@@ -32,6 +31,10 @@
   display: flex;
   margin-bottom: 10px;
   position: relative;
+}
+
+.log-in__close h3 {
+  margin-bottom: 0;
 }
 
 .log-in-close {
@@ -89,4 +92,14 @@ input:hover {
   outline: none !important;
   background-color: rgb(56, 91, 168);
   transition: 1s;
+}
+
+.log-in__modalWindow input {
+  background-color: rgb(34, 34, 36);
+  border: none;
+  border-bottom: solid 1px rgb(106, 110, 110);
+  color: rgb(196, 196, 197);
+  outline: none !important;
+  margin-bottom: 15px;
+  width: 100%;
 }
