@@ -23,7 +23,7 @@ class EditModeLogIn extends React.Component {
           </div>
           <div><span>Password</span></div>
           <div>
-            <input maxlength="10" onChange={this.typePassword} value={this.state.password} type="password" ></input>
+            <input maxlength="10" onChange={this.typePassword} value={this.state.password} type='search' ></input>
           </div>
           <div className='logIn__update-button'>
             <button onClick={this.updateModalWindowLogIn}>Update</button>
