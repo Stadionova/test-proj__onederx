@@ -83,7 +83,7 @@ export default connect(
     saveLastName: (lastName) => dispatch({ type: "DATA_LAST_NAME", payload: lastName }),
     saveFullName: (fullName) => dispatch({ type: "DATA_FULL_NAME", payload: fullName }),
     saveCountry: (country) => dispatch({ type: "DATA_COUNTRY", payload: country }),
-    editModeUserInfoCancel: (country, fullName, inputStatus, firstName) => dispatch({ type: "HIDE_CHANGE_WINDOW", payload: country, fullName, inputStatus, firstName }),
+    editModeUserInfoCancel: (country, fullName, passwordFilledUp, firstName) => dispatch({ type: "HIDE_CHANGE_WINDOW", payload: country, fullName, passwordFilledUp, firstName }),
     editModeUserInfoUpdate: () => dispatch({ type: "UPDATE_BUTTON" })
   })
 )(EditModeUserInfo);

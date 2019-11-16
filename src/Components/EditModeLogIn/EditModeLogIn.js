@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 
 class EditModeLogIn extends React.Component {
 
+  state = {
+    inputPassword: ''
+  }
+
   render() {
 
     return (
@@ -12,7 +16,7 @@ class EditModeLogIn extends React.Component {
           <div className='logIn__close'>
             <div><h3>Log in</h3></div>
             <div className='logIn__close-button'>
-              <button onClick={this.closeModalWindowLogIn}>Cancel</button>
+              <button onClick={this.closeEditModeLogIn}>Cancel</button>
             </div>
           </div>
           <div><span>Password</span></div>
@@ -29,20 +33,20 @@ class EditModeLogIn extends React.Component {
 
   typePassword = (e) => {
     const password = e.currentTarget.value;
-    this.props.savePassword(password);
+    this.setState({
+      inputPassword: password
+    });
   }
 
-  closeModalWindowLogIn = () => {
-    if (!this.props.inputStatus) {
-      const password = '';
-      this.props.savePassword(password);
-      this.props.hideModalLogIn();
-    }
-    this.props.hideModalLogIn();
+  closeEditModeLogIn = () => {
+    this.props.hideEditModeLogIn();
+    this.setState({
+      inputPassword: ''
+    });
   }
 
   updateModalWindowLogIn = () => {
-    this.props.saveAndClosePassword(this.props.password);
+    this.props.saveAndClosePassword(this.state.inputPassword);
   }
 
 }
@@ -53,8 +57,7 @@ export default connect(
   }),
   dispatch => ({
     savePassword: (password) => dispatch({ type: "DATA_PASSWORD", payload: password }),
-    hideModalLogIn: () => dispatch({ type: "CHANGE_WINDOW_LOGIN-STATUS_FALSE" }),
-    updateModalWindowLogIn: (password) => dispatch({ type: "UPDATE_WINDOW_LOGIN", payload: password }),
-    saveAndClosePassword: (password) => dispatch({ type: "SAVE_AND_CLOSE", payload: password }),
+    hideEditModeLogIn: () => dispatch({ type: "LOGIN_EDIT_MODE_SWITCH_OFF" }),
+    saveAndClosePassword: (password) => dispatch({ type: "SAVE_PASSWORD_AND_CLOSE_EDIT_MODE", payload: password }),
   })
 )(EditModeLogIn);

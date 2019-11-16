@@ -14,7 +14,7 @@ const initialState = {
     authentication: true,
     userInfoEditMode: false,
     loginInEditMode: false,
-    inputStatus: false
+    passwordFilledUp: false
 }
 
 function createStoreUser(state = initialState, action) {
@@ -23,7 +23,6 @@ function createStoreUser(state = initialState, action) {
         return {
             ...state,
             firstName: action.payload,
-            inputStatus: true,
             firstNameCopy: action.payload
         };
     }
@@ -56,11 +55,12 @@ function createStoreUser(state = initialState, action) {
         };
     }
 
-    if (action.type === 'SAVE_AND_CLOSE') {
+    if (action.type === 'SAVE_PASSWORD_AND_CLOSE_EDIT_MODE') {
         return {
             ...state,
             loginInEditMode: false,
-            inputStatus: true
+            passwordFilledUp: true,
+            password: action.payload
         };
     }
 
@@ -92,24 +92,17 @@ function createStoreUser(state = initialState, action) {
         };
     }
 
-    if (action.type === 'CHANGE_WINDOW_LOGIN-STATUS_FALSE') {
+    if (action.type === 'LOGIN_EDIT_MODE_SWITCH_OFF') {
         return {
             ...state,
             loginInEditMode: false
         };
     }
 
-    if (action.type === 'CHANGE_WINDOW_LOGIN_STATUS_TRUE') {
+    if (action.type === 'LOGIN_EDIT_MODE_SWITCH_ON') {
         return {
             ...state,
             loginInEditMode: true
-        };
-    }
-
-    if (action.type === 'UPDATE_WINDOW_LOGIN') {
-        return {
-            ...state,
-            password: action.payload
         };
     }
 

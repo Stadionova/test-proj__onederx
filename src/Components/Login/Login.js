@@ -14,7 +14,7 @@ class LogIn extends React.Component {
           <div className='logIn__name'>
             <div className='name'><span>Password</span></div>
             <div className='logIn__value'>
-              <div><span>{this.changeLengthToStars(this.props.password.length)}</span></div>
+              <div><span>{this.props.password ? this.changeLengthToStars(this.props.password.length) : ''}</span></div>
               <div className='logIn__change'>
                 <button onClick={this.openModalWindowLogIn}>Change</button>
               </div>
@@ -40,6 +40,6 @@ export default connect(
     loginInEditMode: state.loginInEditMode
   }),
   dispatch => ({
-    showEditModeLogIn: () => dispatch({ type: "CHANGE_WINDOW_LOGIN_STATUS_TRUE" })
+    showEditModeLogIn: () => dispatch({ type: "LOGIN_EDIT_MODE_SWITCH_ON" })
   })
 )(LogIn);
