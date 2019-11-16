@@ -10,13 +10,13 @@ const Security = (props) => {
   }
 
   return (
-    <div className='security'>
+    <div className='security__container'>
       <div><h3>Security</h3></div>
       <div>
-        <div className='grey'><span>Two-Factor Authentication</span></div>
-        <div className='security-buttons'>
+        <div className='security__factors'><span>Two-Factor Authentication</span></div>
+        <div className='security__buttons'>
           <div><span>{props.authentication ? 'Enabled' : 'Disabled'}</span></div>
-          <div><button className='security-buttonsChange' onClick={changeAble}>{props.authentication ? 'Disable' : 'Enable'}</button></div>
+          <div><button onClick={changeAble}>{props.authentication ? 'Disable' : 'Enable'}</button></div>
         </div>
       </div>
     </div>

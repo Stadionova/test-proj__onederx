@@ -1,58 +1,30 @@
-@font-face {
-  font-family: 'Fontspring-DEMO-aktifoa-bold';
-  src: url("../../fonts/Fontspring-DEMO-aktifoa-bold.otf");
-}
-
-.security {
+.security__container {
   margin-top: 10px;
   width: 200px;
 }
 
-.grey {
+.security__container h3 {
+  margin-bottom: 15px;
+}
+
+.security__factors {
   color: rgb(106, 110, 110);
   font-size: 10pt;
 }
 
-/* button {
-  border: none;
-  background-color: rgb(23, 25, 26);
-  color: rgb(32, 104, 255);
-  font-family: Fontspring-DEMO-publicasans-regular;
-  font-size: 8pt;
-} */
-
-.security-buttons input {
-  background-color: rgb(23, 25, 26);
-  border: none;
-  color: rgb(218, 217, 214);
-  outline: none;
-  width: 60px;
-}
-
-.security-buttons input:active {
-  background-color: rgb(23, 25, 26);
-  outline: none;
-}
-
-.security-buttons {
+.security__buttons {
   display: flex;
-}
-
-.security-buttons {
   color: rgb(218, 217, 214);
 }
 
-.security h3 {
-  margin-bottom: 15px;
-}
-
-.security-buttons span {
+.security__buttons span {
   font-size: 9pt;
+  color: rgb(231, 230, 227);
 }
 
-.security-buttonsChange:active,
-.security-buttonsChange:focus,
-.security-buttonsChange:hover {
+.security__buttons button:active,
+.security__buttons button:focus,
+.security__buttons button:hover {
   outline: none !important;
   color: rgb(143, 173, 238);
   transition: 1s;

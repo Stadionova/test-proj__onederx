@@ -46,3 +46,9 @@
   font-size: 10pt;
   color: rgb(218, 217, 214);
 }
+
+.userInfo__name span,
+.userInfo__country span {
+  font-size: 10pt;
+  color: rgb(231, 230, 227);
+}
