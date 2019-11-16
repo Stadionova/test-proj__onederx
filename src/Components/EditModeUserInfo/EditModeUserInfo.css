@@ -75,7 +75,7 @@ input:hover {
 .editModeUserInfo__update button:focus,
 .editModeUserInfo__update button:hover {
   outline: none !important;
-  background-color: rgb(56, 91, 168);
+  background-color: rgb(5, 99, 65);
   transition: 1s;
 }
 

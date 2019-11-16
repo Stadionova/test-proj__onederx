@@ -1,37 +1,32 @@
 @font-face {
-  font-family: 'Fontspring-DEMO-publicasans-light';
-  src: url("../../fonts/Fontspring-DEMO-publicasans-light.otf");
-  font-family: 'Fontspring-DEMO-publicasans-regular';
-  src: url("../../fonts/Fontspring-DEMO-publicasans-regular.otf");
   font-family: 'ofont.ru_Formular';
   src: url("../../fonts/ofont.ru_Formular.ttf");
 }
 
-.balance {
+.balance__container {
   font-family: 'ofont.ru_Formular';
   font-size: 8pt;
   margin-bottom: 1px;
 }
 
-.balance-btc {
+.balance__btc {
   color: rgb(231, 230, 227);
 }
 
-.deposit {
+.balance__deposit {
   width: 100px;
   display: flex;
-  font-family: 'ofont.ru_Formular';
   justify-content: space-between;
   font-size: 8pt;
   font-weight: bold;
 }
 
-.deposit a {
+.balance__deposit a {
   color: rgb(241, 241, 241);
   text-decoration: none;
 }
 
-.deposit a:hover {
+.balance__deposit a:hover {
   color: rgb(32, 104, 255);
   transition: 1s;
 }

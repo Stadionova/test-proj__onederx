@@ -1,18 +1,18 @@
 import React from 'react';
 import './LogIn.css';
 import { connect } from 'react-redux';
-import ModalWindowLogIn from "../ModalWindowLogIn/ModalWindowLogIn";
+import EditModeLogIn from "../EditModeLogIn/EditModeLogIn";
 
 class LogIn extends React.Component {
 
   render() {
     return this.props.loginInEditMode ?
-      <ModalWindowLogIn />
+      <EditModeLogIn />
       : (
         <div className='logIn__container'>
           <div><h3>Log in</h3></div>
           <div className='logIn__name'>
-            <div><span>Password</span></div>
+            <div className='name'><span>Password</span></div>
             <div className='logIn__value'>
               <div><span>{this.changeLengthToStars(this.props.password.length)}</span></div>
               <div className='logIn__change'>

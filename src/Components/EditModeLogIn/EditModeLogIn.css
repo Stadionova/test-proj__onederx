@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Fontspring-DEMO-aktifoa-bold';
+  src: url("../../fonts/Fontspring-DEMO-aktifoa-bold.otf");
+}
+
+.logIn__editContainer {
+  width: 280px;
+  height: 330px;
+  background-color: rgb(34, 34, 36);
+  color: white;
+  margin-top: 10px;
+}
+
+.logIn__editContainer span {
+  color: rgb(106, 110, 110);
+  font-size: 9pt;
+}
+
+.logIn__edit {
+  width: 240px;
+  height: 295px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logIn__edit input {
+  background-color: rgb(34, 34, 36);
+  border: none;
+  border-bottom: solid 1px rgb(106, 110, 110);
+  color: rgb(196, 196, 197);
+  outline: none !important;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.logIn__edit 
+input:active,
+input:hover {
+  outline: none !important;
+  border-bottom: solid 1px rgb(196, 196, 197);
+}
+
+.logIn__close {
+  display: flex;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.logIn__close h3 {
+  margin-bottom: 0;
+}
+
+.logIn__close-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.logIn__close-button button {
+  background-color: rgb(34, 34, 36);
+  border: none;
+}
+
+.logIn__close-button button:active,
+.logIn__close-button button:focus,
+.logIn__close-button button:hover {
+  outline: none !important;
+  color: rgb(143, 173, 238);
+  transition: 1s;
+}
+
+.logIn__update-button {
+  position: absolute;
+  bottom: 0;
+}
+
+.logIn__update-button button {
+  width: 240px;
+  height: 50px;
+  background-color: rgb(32, 104, 255);
+  color: white;
+  font-size: 12pt;
+}
+
+.logIn__update-button button:active,
+.logIn__update-button button:focus,
+.logIn__update-button button:hover {
+  outline: none !important;
+  background-color: rgb(5, 99, 65);
+  transition: 1s;
+}

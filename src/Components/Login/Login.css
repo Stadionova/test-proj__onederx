@@ -35,3 +35,8 @@
   color: rgb(143, 173, 238);
   transition: 1s;
 }
+
+.name span {
+  color: rgb(106, 110, 110);
+  font-size: 10pt;
+}

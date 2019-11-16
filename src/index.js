@@ -55,13 +55,6 @@ function createStoreUser(state = initialState, action) {
         };
     }
 
-    if (action.type === 'SHOW_BULLET_PASSWORD') {
-        return {
-            ...state,
-            password: action.payload
-        };
-    }
-
     if (action.type === 'TOGGLE_TWO_FACTOR') {
         return {
             ...state,

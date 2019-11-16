@@ -3,17 +3,17 @@
   src: url("../../fonts/ofont.ru_Formular.ttf");
 }
 
-.margin {
+.margin__container {
   width: 100px;
   color: rgb(231, 230, 227);
   font-family: 'ofont.ru_Formular';
   font-size: 8pt;
 }
 
-.margin span:nth-child(1) {
+.margin__container span:nth-child(1) {
   margin-bottom: 1px;
 }
 
-.btc {
+.margin__btc {
   color: rgb(106, 110, 110);
 }
