@@ -3,7 +3,7 @@
   src: url("../../fonts/ofont.ru_Formular.ttf");
 }
 
-.Api {
+.api {
   color: rgb(224, 223, 221);
   font-family: 'ofont.ru_Formular';
   font-size: 8pt;
@@ -14,25 +14,22 @@
   margin-right: 60px;
 }
 
-.first {
+.api__buttons-trade {
   margin-right: 50px;
 }
 
-.documentation {
+.api__buttons-doc {
   margin-right: 100px;
 }
 
-.API__buttons a {
+.api a {
+  color: rgb(224, 223, 221);
+  text-decoration: none;
   position: absolute;
   bottom: 0;
 }
 
-.Api a {
-  color: rgb(224, 223, 221);
-  text-decoration: none;
-}
-
-.Api a:hover {
+.api a:hover {
   color: rgb(32, 104, 255);
   transition: 1s;
 }

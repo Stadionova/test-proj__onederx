@@ -4,10 +4,10 @@ import './Api.css';
 const Api = () => {
 
   return (
-    <div className='Api'>
-      <div className='API__buttons first'><a href='#'>Trade</a></div>
-      <div className='API__buttons documentation'><a href='#'>Documentation</a></div>
-      <div className='API__buttons'><a href='#'>Api</a></div>
+    <div className='api'>
+      <div className='api__buttons-trade'><a href='#'>Trade</a></div>
+      <div className='api__buttons-doc'><a href='#'>Documentation</a></div>
+      <div className='api__buttons-api'><a href='#'>Api</a></div>
     </div>
   )
 }
