@@ -7,18 +7,18 @@ class UserInfo extends React.Component {
 
   render() {
     return this.props.userInfoEditMode === false ? (
-      <div className="user-info-container">
-        <div className="user-info-change">
+      <div className="userInfo__container">
+        <div className="userInfo__title">
           <h3>User info</h3>
-          <div><button className='changeButton' onClick={this.openModalWindow}>Change</button></div>
+          <div><button onClick={this.openModalWindow}>Change</button></div>
         </div>
-        <div className='user-info-name'>
-          <div className='grey'><span>Name</span></div>
-          <div className='white'><span>{this.props.fullName}</span></div>
+        <div className='userInfo__nameField'>
+          <div className='userInfo__headline'><span>Name</span></div>
+          <div className='userInfo__name'><span>{this.props.fullName}</span></div>
         </div>
-        <div className='user-info-country'>
-          <div className='grey'><span>Country of Residence</span></div>
-          <div className='white'><span>{this.props.country}</span></div>
+        <div className='userInfo__countryField'>
+          <div className='userInfo__headline'><span>Country of Residence</span></div>
+          <div className='userInfo__country'><span>{this.props.country}</span></div>
         </div>
       </div>
     ) : <ModalWindowUserInfo />;
@@ -37,8 +37,6 @@ export default connect(
     userInfoEditMode: state.userInfoEditMode
   }),
   dispatch => ({
-    showFullName: (fullName) => dispatch({ type: "DATA_FULL_NAME", payload: fullName }),
-    saveCountry: (country) => dispatch({ type: "DATA_COUNTRY", payload: country }),
     showModal: (fullName, country) => dispatch({ type: "SHOW_CHANGE_WINDOW", payload: fullName, country })
   })
 )(UserInfo);

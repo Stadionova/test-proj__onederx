@@ -1,16 +1,9 @@
-@font-face {
-  font-family: 'Fontspring-DEMO-aktifoa-bold';
-  src: url("../../fonts/Fontspring-DEMO-aktifoa-bold.otf");
-  font-family: 'Fontspring-DEMO-ncttorin-bold';
-  src: url("../../fonts/Fontspring-DEMO-ncttorin-bold.otf");
-}
-
-.user-info-container {
+.userInfo__container {
   margin-top: 10px;
   width: 200px;
 }
 
-.user-info-change {
+.userInfo__title {
   display: flex;
   color: rgb(224, 223, 221);
   width: 140px;
@@ -18,35 +11,38 @@
   height: 42px;
 }
 
-.user-info-name {
-  margin-top: 15px;
-}
-
-.grey {
-  color: rgb(106, 110, 110);
-  font-size: 10pt;
-}
-
-.white {
-  color: rgb(218, 217, 214);
-  margin-bottom: 30px;
-}
-
-.user-info-change button {
+.userInfo__title button {
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-.changeButton:active,
-.changeButton:focus,
-.changeButton:hover {
+.userInfo__title button:active,
+.userInfo__title button:focus,
+.userInfo__title button:hover {
   outline: none !important;
   color: rgb(143, 173, 238);
   transition: 1s;
 }
 
-.white span {
+.userInfo__nameField {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.userInfo__headline {
+  color: rgb(106, 110, 110);
+  font-size: 10pt;
+}
+
+.userInfo__name,
+.userInfo__country {
+  color: rgb(218, 217, 214);
+  margin-bottom: 30px;
+}
+
+.userInfo__name,
+.userInfo__country {
   font-size: 10pt;
   color: rgb(218, 217, 214);
 }
