@@ -29,3 +29,9 @@
   color: rgb(143, 173, 238);
   transition: 1s;
 }
+
+@media (max-width: 900px) {
+  .security__container {
+    margin-top: 40px;
+  }
+}

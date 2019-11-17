@@ -31,7 +31,9 @@ class EditModeUserInfo extends React.Component {
           </div>
           <div>
             <div><span>Country of Residence</span></div>
-            <input maxlength="15" type='search' value={this.state.country} onChange={this.typeCountry}></input>
+            <div>
+              <input maxlength="15" type='search' value={this.state.country} onChange={this.typeCountry}></input>
+            </div>
           </div>
           <div className='editModeUserInfo__update'>
             <button onClick={this.closeModalWindowAndSave}>Update</button>

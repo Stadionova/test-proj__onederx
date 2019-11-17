@@ -40,3 +40,13 @@ button {
   color: rgb(32, 104, 255);
   font-size: 8pt;
 }
+
+@media (max-width: 900px) {
+  .userBlocks {
+    display: block;
+  }
+
+  .container__settings {
+    margin: 20px;
+  }
+}

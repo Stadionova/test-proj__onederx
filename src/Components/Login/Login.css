@@ -40,3 +40,9 @@
   color: rgb(106, 110, 110);
   font-size: 10pt;
 }
+
+@media (max-width: 900px) {
+  .logIn__container {
+    margin-top: 40px;
+  }
+}
