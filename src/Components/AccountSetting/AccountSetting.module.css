@@ -45,12 +45,14 @@ button {
   .userBlocks {
     display: block;
     margin: 0 auto;
+    width: 245px;
+    margin-top: 20px;
   }
 
   .container {
     width: 100%;
-    /* grid-column: 1 / 2; */
     background-color: rgb(23, 25, 26);
+    height: 1000px;
   }
 
   .container__settings {

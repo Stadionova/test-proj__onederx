@@ -38,7 +38,15 @@
 
 @media (max-width: 900px) {
   .container-header {
-    width: 500px;
+    width: 0px;
+  }
+
+  .header {
+    width: 0px;
+  }
+
+  .header__logo {
+    margin-right: 30px;
   }
 }
 
