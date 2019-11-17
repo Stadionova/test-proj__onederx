@@ -17,3 +17,9 @@
 .margin__btc {
   color: rgb(106, 110, 110);
 }
+
+@media (max-width: 900px) {
+  .margin__container {
+    display: none;
+  }
+}

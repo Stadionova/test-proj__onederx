@@ -26,6 +26,11 @@
   color: green;
 }
 
+@media (max-width: 900px) {
+  .pnl__container {
+    display: none;
+  }
+}
 
 
 

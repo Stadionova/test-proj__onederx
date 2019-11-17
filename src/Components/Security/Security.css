@@ -32,6 +32,8 @@
 
 @media (max-width: 900px) {
   .security__container {
+    width: 585px;
+    margin: 0 auto;
     margin-top: 40px;
   }
 }

@@ -36,11 +36,11 @@
   margin-top: 5px;
 }
 
-/* @media (max-width: 1000px) {
-  .header {
-    display: block;
+@media (max-width: 900px) {
+  .container-header {
+    width: 500px;
   }
-} */
+}
 
 
 

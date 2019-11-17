@@ -21,40 +21,13 @@ body {
   grid-column: 1 / 18;
 }
 
-/* .containerApp__account {
-  display: grid;
-  grid-template-columns: repeat(18, 1fr);
-  grid-template-rows: repeat(18, 34.7px);
-  background-color: rgb(0, 0, 0);
-}
+@media (max-width: 900px) {
+  .containerApp-header {
+    width: 0px;
+    margin: 0;
+  }
 
-@media (min-width: 400px) {
   .containerApp__account {
     grid-template-columns: repeat(2, 100px);
-    width: 500px;
   }
 }
-
-@media (min-width: 400px) {
-  .containerApp-header {
-    grid-column: 1 / 2;
-    width: 500px;
-  }
-} */
-
-/* .containerApp__charts {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-template-rows: repeat(2, 260px);
-  display: grid;
-  width: 1100px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1000px) {
-  .containerApp__charts {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(2, 280px);
-    width: 500px;
-    margin-left: 20px;
-  }
-} */

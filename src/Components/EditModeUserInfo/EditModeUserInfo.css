@@ -79,3 +79,8 @@ input:hover {
   transition: 1s;
 }
 
+@media (max-width: 900px) {
+  .editModeUserInfo-container {
+    margin-left: 0px;
+  }
+}

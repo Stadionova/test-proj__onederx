@@ -44,9 +44,21 @@ button {
 @media (max-width: 900px) {
   .userBlocks {
     display: block;
+    margin: 0 auto;
+  }
+
+  .container {
+    width: 100%;
+    /* grid-column: 1 / 2; */
+    background-color: rgb(23, 25, 26);
   }
 
   .container__settings {
+    width: 482px;
     margin: 20px;
+  }
+
+  .title {
+    text-align: center;
   }
 }

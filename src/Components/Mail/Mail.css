@@ -48,3 +48,8 @@
   border: none;
 }
 
+@media (max-width: 900px) {
+  .mail__container {
+    display: none;
+  }
+}

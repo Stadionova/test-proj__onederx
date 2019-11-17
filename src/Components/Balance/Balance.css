@@ -30,3 +30,9 @@
   color: rgb(32, 104, 255);
   transition: 1s;
 }
+
+@media (max-width: 900px) {
+  .balance__container {
+    display: none;
+  }
+}

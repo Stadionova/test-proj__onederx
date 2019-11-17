@@ -52,3 +52,11 @@
   font-size: 10pt;
   color: rgb(231, 230, 227);
 }
+
+@media (max-width: 900px) {
+  .userInfo__container {
+    width: 585px;
+    margin: 0 auto;
+  }
+}
+
