@@ -9,6 +9,8 @@
   background-color: rgb(34, 34, 36);
   color: white;
   margin-top: 10px;
+  margin-left: 280px;
+  position: fixed;
 }
 
 .logIn__editContainer span {
@@ -104,5 +106,6 @@ img {
   .logIn__editContainer {
     right: 20px;
     position: relative;
+    margin-left: 0px;
   }
 }

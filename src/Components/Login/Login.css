@@ -1,6 +1,8 @@
 .logIn__container {
   width: 200px;
   margin-top: 10px;
+  position: fixed;
+  margin-left: 300px;
 }
 
 .logIn__container h3 {
@@ -46,5 +48,7 @@
     margin-top: 40px;
     width: 285px;
     margin: 0 auto;
+    margin-left: 0px;
+    position: absolute;
   }
 }
